@@ -18,12 +18,31 @@ License: GPL
 GitHub URI: https://github.com/pronamic/wp-pronamic-post-like
 */
 
+function pronamic_get_post_like_link( $comment = 'like', $post_id = null ) {
+	$post_id = ( null === $post_id ) ? get_the_ID() : $post_id;
+	
+	$link = get_permalink( $post_id );
+	$link = add_query_arg( 'like', $comment, $link );
+	$link = wp_nonce_url( $link, 'pronamic_like', 'like_nonce' );
+	
+	return $link;
+}
+
 function pronamic_post_like_the_content( $content ) {
-	$content .= sprintf( '<a href="%s">%s</a>', 
-		wp_nonce_url( add_query_arg( 'like', true ), 'pronamic_like', 'like_nonce' ),
-		__( 'Vote', 'pronamic_post_like' )
+	$like_methods = array(
+		'like' => __( 'Like', '' ),
+		'fun'  => __( 'Fun', '' ),
+		'cute' => __( 'Cute', '' ),
+		'wow'  => __( 'Wow', '' )
 	);
 	
+	foreach ( $like_methods as $name => $label ) {
+		$content .= sprintf( '<a href="%s">%s</a> ', 
+			pronamic_get_post_like_link( $name ),
+			$label
+		);
+	}
+
 	$results = pronamic_post_like_results( get_the_ID() );
 	
 	var_dump( $results );
