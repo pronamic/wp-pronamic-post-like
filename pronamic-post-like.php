@@ -36,6 +36,7 @@ class Pronamic_WP_PostLikePlugin {
 		$this->like_types = array();
 
 		add_action( 'template_redirect', array( $this, 'maybe_like' ) );
+		add_action( 'wp_update_comment_count', array( $this, 'update_comment_count' ) );
 	}
 
 	/**
@@ -222,6 +223,31 @@ class Pronamic_WP_PostLikePlugin {
 		}
 
 		return $results;
+	}
+
+	/**
+	 * Update comment count
+	 * 
+	 * @see https://github.com/WordPress/WordPress/blob/3.6/wp-includes/comment.php#L1620
+	 */
+	public function update_comment_count( $post_id ) {
+		global $wpdb;
+		
+		$new = (int) $wpdb->get_var( $wpdb->prepare( "
+			SELECT
+				COUNT(*)
+			FROM
+				$wpdb->comments
+			WHERE
+				comment_post_ID = %d
+					AND
+				comment_approved = '1'
+					AND
+				comment_type != 'pronamic_like'
+			", $post_id
+		) );
+
+		$wpdb->update( $wpdb->posts, array( 'comment_count' => $new ), array( 'ID' => $post_id ) );
 	}
 }
 
