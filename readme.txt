@@ -14,7 +14,14 @@ Stable tag: 1.0.0
 
 == Installation ==
 
-...
+If you want to implement a social vote system you can add the 
+'pronamic-social-vote' to the Facebook like button widget or 
+Twitter tweet button.
+
+To auto update the number votes you can specify an the following
+data attribute:
+
+	data-pronamic-social-vote-count=".pronamic-social-vote-count" 
 
 
 == Screenshots ==
