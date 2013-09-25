@@ -483,3 +483,19 @@ function pronamic_register_post_like_type( $type, $comment ) {
 	
 	$pronamic_post_like_plugin->types[$type] = $comment;
 }
+
+function pronamic_shortcode_pronamic_vote_link( $atts, $content = '' ) {
+	extract( shortcode_atts( array(
+		'post_id' => false
+     ), $atts ) );	
+
+	$output = '';
+
+	if ( ! empty( $post_id ) ) {
+		
+	}
+
+	return ':-)';
+}
+
+add_shortcode( 'pronamic_vote_link', 'pronamic_shortcode_pronamic_vote_link' );
