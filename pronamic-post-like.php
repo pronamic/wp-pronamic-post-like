@@ -27,13 +27,24 @@ class Pronamic_WP_PostLikePlugin {
 	private $file;
 
 	/**
+	 * Types
+	 * 
+	 * @var array
+	 */
+	public $types;
+
+	/**
 	 * Constructs and intializes an Pronamic Post Like plugin
 	 * 
 	 * @param string $file
 	 */
 	public function __construct( $file ) {
-		$this->file       = $file;
-		$this->like_types = array();
+		$this->file  = $file;
+
+		$this->types = array(
+			'facebook_like' => __( 'I liked this post on Facebook.', 'pronamic_post_like' ),
+			'twitter_tweet' => __( 'I tweeted this post on Twitter.', 'pronamic_post_like' )
+		);
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ), 20 );
 
@@ -93,6 +104,15 @@ class Pronamic_WP_PostLikePlugin {
 				'postId'  => get_the_ID()
 			)
 		);
+	}
+
+	/**
+	 * Get types
+	 * 
+	 * @return array
+	 */
+	public function get_types() {
+		return array_keys( $this->types ); 
 	}
 
 	/**
@@ -165,24 +185,11 @@ class Pronamic_WP_PostLikePlugin {
 		$user_id    = get_current_user_id();
 		$ip_address = $this->get_ip_address();
 
-		if ( pronamic_post_like_can_vote( $post_id, $type ) ) {
+		if ( isset( $this->types[$type] ) &&  pronamic_post_like_can_vote( $post_id, $type ) ) {
 			$comment_data = $this->get_comment_data( $post_id );
 
-			$content = __( 'I voted on this post.', 'pronamic_post_like' );
-
-			switch( $type ) {
-				case 'facebook_like':
-					$content = __( 'I liked this post on Facebook.', 'pronamic_post_like' );
-					
-					break;
-				case 'twitter_tweet':
-					$content = __( 'I tweeted this post on Twitter.', 'pronamic_post_like' );
-					
-					break;
-			}
-
 			$comment_data['comment_type']    = $type;
-			$comment_data['comment_content'] = $content;
+			$comment_data['comment_content'] = $this->types[$type];
 					
 			$result = wp_insert_comment( $comment_data );
 			
@@ -191,7 +198,7 @@ class Pronamic_WP_PostLikePlugin {
 			}
 		}
 
-		$response->count  = $this->get_comment_count( $post_id, array( 'facebook_like', 'twitter_tweet' ) );
+		$response->count  = $this->get_comment_count( $post_id, $this->get_types() );
 
 		// Output
 		header( 'Content-type: application/json' );
@@ -206,24 +213,21 @@ class Pronamic_WP_PostLikePlugin {
 	 */
 	public function maybe_like() {
 		if ( filter_has_var( INPUT_GET, 'like' ) && wp_verify_nonce( filter_input( INPUT_GET, 'like_nonce', FILTER_SANITIZE_STRING ), 'pronamic_like' ) ) {
-			$like_type = filter_input( INPUT_GET, 'like', FILTER_SANITIZE_STRING );
-			if ( empty( $like_type ) ) {
-				$like_type = 'like';
-			}
-
+			$type = filter_input( INPUT_GET, 'like', FILTER_SANITIZE_STRING );
+			
 			$post_id = get_the_ID();
 
 			$url = add_query_arg( array(
 				'like'       => false,
 				'like_nonce' => false,
 				'liked'      => 'no'
-			) ) . '#like-' . $like_type;
+			) ) . '#like-' . $type;
 
-			if ( pronamic_post_like_can_vote( $post_id, 'pronamic_like' ) ) {
+			if ( isset( $this->types[$type] ) && pronamic_post_like_can_vote( $post_id, 'pronamic_like' ) ) {
 				$comment_data = $this->get_comment_data( $post_id );
 				
-				$comment_data['comment_type']    = 'pronamic_like';
-				$comment_data['comment_content'] = $like_type;
+				$comment_data['comment_type']    = $type;
+				$comment_data['comment_content'] = $this->types[$type];
 					
 				$result = wp_insert_comment( $comment_data );
 
@@ -311,24 +315,31 @@ class Pronamic_WP_PostLikePlugin {
 	 * @param string $post_id
 	 * @return array
 	 */
-	public function get_results( $post_id = null, $comment_type = 'pronamic_like' ) {
+	public function get_results( $post_id = null, array $comment_type = null ) {
 		global $wpdb;
 		
 		// Vars
 		$post_id = ( null === $post_id ) ? get_the_ID() : $post_id;
 
+		if ( empty( $comment_type ) ) {
+			$comment_type = $this->get_types();
+		}
+		
+		$comment_type = "'" . join( "', '", $comment_type ) . "'";
+
+		// QUery
 		$query = "
 			SELECT
-				comment_content AS type,
+				comment_type AS type,
 				COUNT( comment_ID ) AS count
 			FROM
 				$wpdb->comments
 			WHERE
 				comment_post_ID = %d
 					AND
-				comment_type = %s
+				comment_type IN ($comment_type)
 			GROUP BY
-				comment_content
+				comment_type
 			;
 		";
 
@@ -390,7 +401,7 @@ class Pronamic_WP_PostLikePlugin {
 	public function update_comment_count( $post_id ) {
 		global $wpdb;
 
-		$comment_type = array( 'pronamic_like', 'pronamic_social_vote' );
+		$comment_type = $this->get_types();
 		$comment_type = "'" . join( "', '", $comment_type ) . "'";
 
 		$new = (int) $wpdb->get_var( $wpdb->prepare( "
@@ -459,4 +470,16 @@ function pronamic_get_comment_count( $post_id, $comment_type ) {
 	global $pronamic_post_like_plugin;
 	
 	return $pronamic_post_like_plugin->get_comment_count( $post_id, $comment_type );
+}
+
+/**
+ * Register post like type
+ * 
+ * @param string $type the comment type
+ * @param string $comment the default comment
+ */
+function pronamic_register_post_like_type( $type, $comment ) {
+	global $pronamic_post_like_plugin;
+	
+	$pronamic_post_like_plugin->types[$type] = $comment;
 }
