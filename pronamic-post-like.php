@@ -50,7 +50,7 @@ class Pronamic_WP_PostLikePlugin {
 		$this->types = array(
 			'facebook_like' => __( 'I liked this post on Facebook.', 'pronamic_post_like' ),
 			'twitter_tweet' => __( 'I tweeted this post on Twitter.', 'pronamic_post_like' ),
-			'email'         => __( 'I voted on this post by e-amil.', 'pronamic_post_like' )
+			'user_vote'     => __( 'I voted on this post with my user account.', 'pronamic_post_like' )
 		);
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ), 20 );
@@ -289,7 +289,7 @@ class Pronamic_WP_PostLikePlugin {
 				} else {
 					delete_user_meta( $user->ID, 'pronamic_post_like_key' );
 
-					$result = $this->vote( get_the_ID(), 'email' );
+					$result = $this->vote( get_the_ID(), 'user_vote' );
 		
 					$url = add_query_arg( 'ppl_key', false, get_permalink() );
 		

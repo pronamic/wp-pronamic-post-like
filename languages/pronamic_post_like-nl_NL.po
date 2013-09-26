@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pronamic Post Like\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-26 10:01+0100\n"
-"PO-Revision-Date: 2013-09-26 10:01+0100\n"
+"POT-Creation-Date: 2013-09-26 10:05+0100\n"
+"PO-Revision-Date: 2013-09-26 10:05+0100\n"
 "Last-Translator: Remco Tolsma <info@remcotolsma.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "Language: nl_NL\n"
@@ -28,8 +28,8 @@ msgid "I tweeted this post on Twitter."
 msgstr "Ik twitterde dit bericht op Twitter."
 
 #: pronamic-post-like.php:53
-msgid "I voted on this post by e-amil."
-msgstr "Ik heb op dit bericht gestemd via e-mail."
+msgid "I voted on this post with my user account."
+msgstr "Ik heb op dit bericht gestemd via mijn gebruikersaccount."
 
 #: pronamic-post-like.php:163
 msgid "Anonymous"
