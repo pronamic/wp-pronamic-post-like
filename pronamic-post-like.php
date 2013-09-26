@@ -39,22 +39,28 @@ class Pronamic_WP_PostLikePlugin {
 	 * @param string $file
 	 */
 	public function __construct( $file ) {
-		$this->file  = $file;
+		$this->file = $file;
+		$this->path = plugin_dir_path( $file );
+		
+		require_once $this->path . 'includes/functions.php';
+		require_once $this->path . 'includes/gravityforms.php';
 
 		$this->types = array(
 			'facebook_like' => __( 'I liked this post on Facebook.', 'pronamic_post_like' ),
-			'twitter_tweet' => __( 'I tweeted this post on Twitter.', 'pronamic_post_like' )
+			'twitter_tweet' => __( 'I tweeted this post on Twitter.', 'pronamic_post_like' ),
+			'email'         => __( 'I voted on this post by e-amil.', 'pronamic_post_like' )
 		);
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ), 20 );
 
 		add_action( 'template_redirect', array( $this, 'maybe_like' ) );
+		add_action( 'template_redirect', array( $this, 'maybe_vote' ) );
 
 		add_action( 'wp_update_comment_count', array( $this, 'update_comment_count' ) );
-		
+
 		// AJAX
 		$action = 'pronamic_social_vote';
-		
+
 		add_action( "wp_ajax_$action", array( $this, 'ajax_social_vote' ) );
 		add_action( "wp_ajax_nopriv_$action", array( $this, 'ajax_social_vote' ) );
 	}
@@ -171,7 +177,29 @@ class Pronamic_WP_PostLikePlugin {
 		
 		return $commentdata;
 	}
-	
+
+	/**
+	 * Vote on the specified post with type
+	 * 
+	 * @param string $post_id
+	 * @param string $type
+	 * @return mixed
+	 */
+	public function vote( $post_id, $type ) {
+		$result = false;
+
+		if ( isset( $this->types[$type] ) &&  pronamic_post_like_can_vote( $post_id, $type ) ) {
+			$comment_data = $this->get_comment_data( $post_id );
+		
+			$comment_data['comment_type']    = $type;
+			$comment_data['comment_content'] = $this->types[$type];
+				
+			$result = wp_insert_comment( $comment_data );
+		}
+		
+		return $result;
+	}
+
 	/**
 	 * AJAX social vote
 	 */
@@ -185,17 +213,10 @@ class Pronamic_WP_PostLikePlugin {
 		$user_id    = get_current_user_id();
 		$ip_address = $this->get_ip_address();
 
-		if ( isset( $this->types[$type] ) &&  pronamic_post_like_can_vote( $post_id, $type ) ) {
-			$comment_data = $this->get_comment_data( $post_id );
-
-			$comment_data['comment_type']    = $type;
-			$comment_data['comment_content'] = $this->types[$type];
-					
-			$result = wp_insert_comment( $comment_data );
-			
-			if ( $result ) {
-				$response->status = 'ok';
-			}
+		$result = $this->vote( $post_id, $type );			
+		
+		if ( $result ) {
+			$response->status = 'ok';
 		}
 
 		$response->count  = $this->get_comment_count( $post_id, $this->get_types() );
@@ -223,22 +244,55 @@ class Pronamic_WP_PostLikePlugin {
 				'liked'      => 'no'
 			) ) . '#like-' . $type;
 
-			if ( isset( $this->types[$type] ) && pronamic_post_like_can_vote( $post_id, 'pronamic_like' ) ) {
-				$comment_data = $this->get_comment_data( $post_id );
-				
-				$comment_data['comment_type']    = $type;
-				$comment_data['comment_content'] = $this->types[$type];
-					
-				$result = wp_insert_comment( $comment_data );
+			$result = $this->vote( $post_id, $type );
 
-				if ( $result ) {
-					$url = add_query_arg( 'liked', $result, $url );
-				}
+			if ( $result ) {
+				$url = add_query_arg( 'liked', $result, $url );
 			}
 			
 			wp_redirect( $url );
 
 			exit;
+		}
+	}
+	
+	/**
+	 * Maybe vote
+	 */
+	public function maybe_vote() {
+		$key = filter_input( INPUT_GET, 'ppl_key', FILTER_SANITIZE_STRING);
+		
+		if ( ! empty( $key ) ) {
+			$user = pronamic_post_like_get_user_by_key( $key );
+		
+			if ( $user !== false ) {
+				$user_login    = $user->user_login;
+				$user_password = get_user_meta( $user->ID, 'pronamic_post_like_password', true );
+		
+				$user = wp_signon( array(
+					'user_login'    => $user_login,
+					'user_password' => $user_password,
+					'remember'      => false
+				) );
+		
+				if ( is_wp_error( $user ) ) {
+					echo $user->get_error_message();
+				} else {
+					$result = $this->vote( get_the_ID(), 'email' );
+		
+					$url = add_query_arg( 'ppl_key', false, get_permalink() );
+		
+					if ( $result ) {
+						$url = add_query_arg( 'voted', 'yes', $url );
+					} else {
+						$url = add_query_arg( 'voted', 'no', $url );
+					}
+		
+					wp_redirect( $url, 302 );
+		
+					exit;
+				}
+			}
 		}
 	}
 
@@ -247,12 +301,16 @@ class Pronamic_WP_PostLikePlugin {
 	 * 
 	 * @param string $post_id
 	 */
-	public function can_vote( $post_id = null, $comment_type = 'pronamic_like' ) {
+	public function can_vote( $post_id = null, $comment_type = null ) {
 		global $wpdb;
 
 		// Vars
 		$post_id = ( null === $post_id ) ? get_the_ID() : $post_id;
 		$user_id = get_current_user_id();
+
+		if ( empty( $comment_type ) ) {
+			$comment_type = $this->get_types();
+		}
 
 		if ( ! is_array( $comment_type ) ) {
 			$comment_type = array( $comment_type );
@@ -428,74 +486,3 @@ class Pronamic_WP_PostLikePlugin {
 global $pronamic_post_like_plugin;
 
 $pronamic_post_like_plugin = new Pronamic_WP_PostLikePlugin( __FILE__ );
-
-/**
- * Can vote helper function
- * 
- * @param int $post_id
- */
-function pronamic_post_like_can_vote( $post_id = null, $comment_type = 'pronamic_like' ) {
-	global $pronamic_post_like_plugin;
-	
-	return $pronamic_post_like_plugin->can_vote( $post_id, $comment_type );
-}
-
-/**
- * Get post like link
- * 
- * @param string $comment
- * @param string $post_id
- */
-function pronamic_get_post_like_link( $comment = 'like', $post_id = null ) {
-	global $pronamic_post_like_plugin;
-
-	return $pronamic_post_like_plugin->get_like_link( $comment, $post_id );
-}
-
-/**
- * Get post like results
- * 
- * @param string $post_id
- */
-function pronamic_get_post_like_results( $post_id = null ) {
-	global $pronamic_post_like_plugin;
-
-	return $pronamic_post_like_plugin->get_results( $post_id );
-}
-
-/**
- * Get comment count
- */
-function pronamic_get_comment_count( $post_id, $comment_type ) {
-	global $pronamic_post_like_plugin;
-	
-	return $pronamic_post_like_plugin->get_comment_count( $post_id, $comment_type );
-}
-
-/**
- * Register post like type
- * 
- * @param string $type the comment type
- * @param string $comment the default comment
- */
-function pronamic_register_post_like_type( $type, $comment ) {
-	global $pronamic_post_like_plugin;
-	
-	$pronamic_post_like_plugin->types[$type] = $comment;
-}
-
-function pronamic_shortcode_pronamic_vote_link( $atts, $content = '' ) {
-	extract( shortcode_atts( array(
-		'post_id' => false
-     ), $atts ) );	
-
-	$output = '';
-
-	if ( ! empty( $post_id ) ) {
-		
-	}
-
-	return ':-)';
-}
-
-add_shortcode( 'pronamic_vote_link', 'pronamic_shortcode_pronamic_vote_link' );
