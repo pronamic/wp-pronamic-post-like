@@ -44,6 +44,8 @@ class Pronamic_WP_PostLikePlugin {
 		
 		require_once $this->path . 'includes/functions.php';
 		require_once $this->path . 'includes/gravityforms.php';
+		
+		add_action( 'plugins_loaded', array( $this, 'plugins_loaded' ) );
 
 		$this->types = array(
 			'facebook_like' => __( 'I liked this post on Facebook.', 'pronamic_post_like' ),
@@ -63,6 +65,13 @@ class Pronamic_WP_PostLikePlugin {
 
 		add_action( "wp_ajax_$action", array( $this, 'ajax_social_vote' ) );
 		add_action( "wp_ajax_nopriv_$action", array( $this, 'ajax_social_vote' ) );
+	}
+
+	/**
+	 * Plugins loaded
+	 */
+	public function plugins_loaded() {
+		load_plugin_textdomain( 'pronamic_post_like', false, dirname( plugin_basename( $this->file ) ) . '/languages/' );
 	}
 
 	/**
@@ -278,6 +287,8 @@ class Pronamic_WP_PostLikePlugin {
 				if ( is_wp_error( $user ) ) {
 					echo $user->get_error_message();
 				} else {
+					delete_user_meta( $user->ID, 'pronamic_post_like_key' );
+
 					$result = $this->vote( get_the_ID(), 'email' );
 		
 					$url = add_query_arg( 'ppl_key', false, get_permalink() );

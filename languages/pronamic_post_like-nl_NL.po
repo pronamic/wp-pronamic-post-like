@@ -1,0 +1,1773 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Pronamic Post Like\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-09-26 10:01+0100\n"
+"PO-Revision-Date: 2013-09-26 10:01+0100\n"
+"Last-Translator: Remco Tolsma <info@remcotolsma.nl>\n"
+"Language-Team: Pronamic <info@pronamic.nl>\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;__ngettext:1,2;__withdesc;_ewithdesc;_c;"
+"_n_noop:1,2;__ngettext_noop:1,2;_x:2c,1;_nc:1,2;esc_attr_e;esc_html_e;"
+"esc_attr__;_nx:4c,1,2;_nx_noop:4c,1,2;esc_html_x:2c,1;esc_html__;_ex:2c,1\n"
+"X-Poedit-Basepath: ../\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: pronamic-post-like.php:51
+msgid "I liked this post on Facebook."
+msgstr "Ik vond dit bericht leuk op Facebook."
+
+#: pronamic-post-like.php:52
+msgid "I tweeted this post on Twitter."
+msgstr "Ik twitterde dit bericht op Twitter."
+
+#: pronamic-post-like.php:53
+msgid "I voted on this post by e-amil."
+msgstr "Ik heb op dit bericht gestemd via e-mail."
+
+#: pronamic-post-like.php:163
+msgid "Anonymous"
+msgstr "Anoniem"
+
+#: includes/gravityforms.php:54
+msgid "Vote"
+msgstr "Stem"
+
+#~ msgid "AppThemes"
+#~ msgstr "AppThemes"
+
+#~ msgid "Order #%s"
+#~ msgstr "Bestelling #%s"
+
+#~ msgid "Advertisement %s"
+#~ msgstr "Advertentie %s"
+
+#~ msgid "Pronamic iDEAL"
+#~ msgstr "Pronamic iDEAL"
+
+#~ msgid "iDEAL"
+#~ msgstr "iDEAL"
+
+#~ msgid "iDEAL Options"
+#~ msgstr "iDEAL-instellingen"
+
+#~ msgid "Enable iDEAL"
+#~ msgstr "iDEAL inschakelen"
+
+#~ msgid "Yes"
+#~ msgstr "Ja"
+
+#~ msgid "No"
+#~ msgstr "Nee"
+
+#~ msgid "iDEAL Configuration"
+#~ msgstr "iDEAL-configuratie"
+
+#~ msgid "Pay with iDEAL"
+#~ msgstr "Betaal met iDEAL"
+
+#~ msgid "ClassiPress"
+#~ msgstr "ClassiPress"
+
+#~ msgid "&mdash; Select configuration &mdash;"
+#~ msgstr "&mdash; Selecteer configuratie &mdash;"
+
+#~ msgid "Accept payment by iDEAL"
+#~ msgstr "Accepteeer betaling via iDEAL"
+
+#~ msgid "Configuration"
+#~ msgstr "Configuratie"
+
+#~ msgid "eShop"
+#~ msgstr "eShop"
+
+#~ msgid "Choose a different payment option"
+#~ msgstr "Kies een andere betaalmethode"
+
+#~ msgid "Click to toggle"
+#~ msgstr "Klik om te wisselen"
+
+#~ msgid "Deactivate Pronamic iDEAL?"
+#~ msgstr "Deactiveer Pronamic iDEAL?"
+
+#~ msgid "Update Settings"
+#~ msgstr "Instellingen bijwerken"
+
+#~ msgid "Activate Pronamic iDEAL?"
+#~ msgstr "Activeer Pronamic iDEAL?"
+
+#~ msgid "Event Espresso"
+#~ msgstr "Event Espresso"
+
+#~ msgid "Attendee #%s"
+#~ msgstr "Deelnemer #%s"
+
+#~ msgid "Attendee %s"
+#~ msgstr "Deelnemer %s"
+
+#~ msgid "WooCommerce"
+#~ msgstr "WooCommerce"
+
+#~ msgid "Pay"
+#~ msgstr "Betalen"
+
+#~ msgid "Choose your bank"
+#~ msgstr "Kies uw bank"
+
+#~ msgid ""
+#~ "The response code (<code>%s<code>) from the iDEAL provider was incorrect."
+#~ msgstr ""
+#~ "De antwoord code (<code>%s<code>) van de iDEAL-provider was onjuist."
+
+#~ msgid "Unknwon iDEAL message (%s)"
+#~ msgstr "Onbekend iDEAL-bericht (%s)"
+
+#~ msgid "&mdash; Other banks &mdash;"
+#~ msgstr "&mdash; Andere banken &mdash;"
+
+#~ msgid "Unknwon Sisow message (%s)"
+#~ msgstr "Onbekend Sisow-bericht (%s)"
+
+#~ msgid "Sisow Bank (test)"
+#~ msgstr "Sisow bank (test)"
+
+#~ msgid "Gravity Forms"
+#~ msgstr "Gravity Forms"
+
+#~ msgid "Entry #%s"
+#~ msgstr "Inzending #%s"
+
+#~ msgid "iDEAL Administrator"
+#~ msgstr "iDEAL-beheerder"
+
+#~ msgid "Administrator"
+#~ msgstr "Beheerder"
+
+#~ msgid "Payment Status"
+#~ msgstr "Betalingsstatus"
+
+#~ msgid "Payment Date"
+#~ msgstr "Betalingsdatum"
+
+#~ msgid "Transaction Id"
+#~ msgstr "Transactie ID"
+
+#~ msgid "Payment Amount"
+#~ msgstr "Te betalen bedrag"
+
+#~ msgid "Create iDEAL feed"
+#~ msgstr "Creëer iDEAL-feed"
+
+#~ msgid "Edit iDEAL feed"
+#~ msgstr "Bewerk iDEAL-feed"
+
+#~ msgid "Issuer Drop Down"
+#~ msgstr "Banken uitschuifkeuzelijst"
+
+#~ msgid "iDEAL Fields"
+#~ msgstr "iDEAL-velden"
+
+#~ msgid "iDEAL payment cancelled."
+#~ msgstr "iDEAL-betaling geannuleerd."
+
+#~ msgid "iDEAL payment expired."
+#~ msgstr "iDEAL-betaling verlopen."
+
+#~ msgid "iDEAL payment failed."
+#~ msgstr "iDEAL-betaling mislukt."
+
+#~ msgid "iDEAL payment completed."
+#~ msgstr "iDEAL-betaling voltooid."
+
+#~ msgid "iDEAL payment open."
+#~ msgstr "iDEAL-betaling open."
+
+#~ msgid "iDEAL payment unknown."
+#~ msgstr "iDEAL-betaling onbekend."
+
+#~ msgid "Jigoshop"
+#~ msgstr "Jigoshop"
+
+#~ msgid "Order %s"
+#~ msgstr "Bestelling %s"
+
+#~ msgid "Allow iDEAL payments."
+#~ msgstr "iDEAL-betalingen toestaan."
+
+#~ msgid "Title"
+#~ msgstr "Titel"
+
+#~ msgid "This controls the title which the user sees during checkout."
+#~ msgstr ""
+#~ "Hiermee beheert u de titel die gebruikers zien tijdens het afrekenen."
+
+#~ msgid "Description"
+#~ msgstr "Beschrijving"
+
+#~ msgid "This controls the description which the user sees during checkout."
+#~ msgstr ""
+#~ "Hiermee beheert u de titel die gebruikers zien tijdens het afrekenen."
+
+#~ msgid "Pending iDEAL payment."
+#~ msgstr "In afwachting van iDEAL-betaling."
+
+#~ msgid "Pronamic iDEAL Options"
+#~ msgstr "Pronamic iDEAL-instellingen"
+
+#~ msgid "Enabled/Disable"
+#~ msgstr "Ingeschaked/uitgeschakeld"
+
+#~ msgid "Membership"
+#~ msgstr "Membership"
+
+#~ msgid "Transaction #%s"
+#~ msgstr "Transactie #%s"
+
+#~ msgid "Continue"
+#~ msgstr "Ga verder"
+
+#~ msgid "One Time ( for %s access, non-recurring )"
+#~ msgstr "Eenmalig ( voor %s toegang, niet terugkerend )"
+
+#~ msgid "1 day"
+#~ msgstr "1 dag"
+
+#~ msgid "2 day"
+#~ msgstr "2 dagen"
+
+#~ msgid "3 day"
+#~ msgstr "3 dagen"
+
+#~ msgid "4 day"
+#~ msgstr "4 dagen"
+
+#~ msgid "5 day"
+#~ msgstr "5 dagen"
+
+#~ msgid "6 day"
+#~ msgstr "6 dagen"
+
+#~ msgid "1 week"
+#~ msgstr "1 week"
+
+#~ msgid "2 week"
+#~ msgstr "2 weken"
+
+#~ msgid "3 week"
+#~ msgstr "3 weken"
+
+#~ msgid "1 month"
+#~ msgstr "1 maand"
+
+#~ msgid "2 month"
+#~ msgstr "2 maand"
+
+#~ msgid "3 month"
+#~ msgstr "3 maand"
+
+#~ msgid "4 month"
+#~ msgstr "4 maand"
+
+#~ msgid "5 month"
+#~ msgstr "5 maand"
+
+#~ msgid "6 month"
+#~ msgstr "6 maand"
+
+#~ msgid "1 year"
+#~ msgstr "1 jaar"
+
+#~ msgid "Pronamic iDEAL Buttons Generator"
+#~ msgstr "Pronamic iDEAL-buttons generator"
+
+#~ msgid "iDEAL Buttons"
+#~ msgstr "iDEAL-buttons"
+
+#~ msgid "Enable/Disable"
+#~ msgstr "Inschakelen/uitschakelen"
+
+#~ msgid "iDEAL s2Member Payment || {{order_id}}"
+#~ msgstr "iDEAL s2Member betaling || {{order_id}}"
+
+#~ msgid "Email"
+#~ msgstr "E-mail"
+
+#~ msgid "Account Confirmation"
+#~ msgstr "Account bevestiging"
+
+#~ msgid "Your password is %s . Please change your password when you login"
+#~ msgstr "Je wachtwoord is %s. Wijzig je wachtwoord wanneer je inlogt."
+
+#~ msgid "Shopp"
+#~ msgstr "Shopp"
+
+#~ msgid "Select configuration"
+#~ msgstr "Selecteer configuratie"
+
+#~ msgid ""
+#~ "Give the customer instructions for paying via iDEAL, and let them know "
+#~ "that their order won't be shipping until the money is received."
+#~ msgstr ""
+#~ "Geef de klant instructies voor het betalen via iDEAL, en laat hen weten "
+#~ "dat hun bestelling niet zal worden verstuurd totdat het geld is ontvangen."
+
+#~ msgid ""
+#~ "With iDEAL you can easily pay online in the secure environment of your "
+#~ "own bank."
+#~ msgstr ""
+#~ "Via iDEAL kunt u vertrouwd, veilig en gemakkelijk online betalen via de "
+#~ "veilige omgeving van uw eigen bank."
+
+#~ msgid "Select an iDEAL configuration."
+#~ msgstr "Selecteer een iDEAL-configuratie."
+
+#~ msgid "Awaiting iDEAL payment."
+#~ msgstr "In afwachting van iDEAL-betaling."
+
+#~ msgid ""
+#~ "Check the payment of order %s in your <a href=\"%s\">iDEAL dashboard</a> "
+#~ "and <a href=\"%s\">update the status of the order</a>."
+#~ msgstr ""
+#~ "Controleer de betaling voor bestelling #%s in uw <a href=\"%s\">iDEAL-"
+#~ "dashboard</a> en <a href=\"%s\">update de status van de bestelling</a>."
+
+#~ msgid "Check iDEAL payment"
+#~ msgstr "Controleer iDEAL-betaling"
+
+#~ msgid "Check iDEAL payment for order %s"
+#~ msgstr "Controleer iDEAL-betaling voor bestelling #%s"
+
+#~ msgid ""
+#~ "The response code (<code>%s<code>) was incorrect, required response code "
+#~ "<code>%s</code>."
+#~ msgstr ""
+#~ "De antwoord code (<code>%s<code>) was onjuist, veriste antwoorde code "
+#~ "<code>%s</code>."
+
+#~ msgid "Could not load the XML string."
+#~ msgstr "Kon de XML tekst niet inladen."
+
+#~ msgid "Gateways"
+#~ msgstr "Gateways"
+
+#~ msgid "Payments"
+#~ msgstr "Betalingen"
+
+#~ msgid "Settings"
+#~ msgstr "Instellingen"
+
+#~ msgid "Pages Generator"
+#~ msgstr "Pagina's generator"
+
+#~ msgid "Status"
+#~ msgstr "Status"
+
+#~ msgid "Gateway Providers"
+#~ msgstr "Gateway providers"
+
+#~ msgid "Providers"
+#~ msgstr "Providers"
+
+#~ msgid "Variants"
+#~ msgstr "Varianten"
+
+#~ msgid "Documentation"
+#~ msgstr "Documentatie"
+
+#~ msgid "Branding"
+#~ msgstr "Huisstijl"
+
+#~ msgid "Configurations"
+#~ msgstr "Configuraties"
+
+#~ msgid "Cancelled"
+#~ msgstr "Geannuleerd"
+
+#~ msgid "Expired"
+#~ msgstr "Verlopen"
+
+#~ msgid "Failure"
+#~ msgstr "Storing"
+
+#~ msgid "Open"
+#~ msgstr "Open"
+
+#~ msgid "Success"
+#~ msgstr "Succes"
+
+#~ msgid "Unknown"
+#~ msgstr "Onbekend"
+
+#~ msgid ""
+#~ "Paying with iDEAL is not possible. Please try again later or pay another "
+#~ "way."
+#~ msgstr ""
+#~ "Betalen met iDEAL is nu niet mogelijk. Probeer het later nogmaals of "
+#~ "betaal op een andere manier."
+
+#~ msgid "No payments found."
+#~ msgstr "Geen betalingen gevonden."
+
+#~ msgid "Date"
+#~ msgstr "Datum"
+
+#~ msgid "Transaction ID"
+#~ msgstr "Transactie ID"
+
+#~ msgid "Purchase ID"
+#~ msgstr "Aankoop ID"
+
+#~ msgid "Consumer"
+#~ msgstr "Consument"
+
+#~ msgid "Amount"
+#~ msgstr "Bedrag"
+
+#~ msgid "Source"
+#~ msgstr "Bron"
+
+#~ msgid "Details"
+#~ msgstr "Details"
+
+#~ msgid ""
+#~ "<strong>Pronamic iDEAL limited:</strong> You exceeded the maximum free "
+#~ "payments of %d, you should enter an valid license key on the <a href=\"%s"
+#~ "\">iDEAL settings page</a>."
+#~ msgstr ""
+#~ "<strong>Pronamic iDEAL beperkt:</strong> U heeft het maximaal aantal "
+#~ "gratis betalingen van %d overschreden, u dient een geldige licentie "
+#~ "sleutel in te voeren op de <a href=\"%s\">iDEAL-instellingen pagina</a>."
+
+#~ msgid ""
+#~ "You can <a href=\"%s\">enter your Pronamic iDEAL API key</a> to use extra "
+#~ "extensions, get support and more than %d payments."
+#~ msgstr ""
+#~ "Je kunt <a href=\"%s\">je Pronamic iDEAL API sleutel invoeren</a> om "
+#~ "gebruik te maken van extra extensies, support en meer dan %d betalingen."
+
+#~ msgid "Test %s"
+#~ msgstr "Test %s"
+
+#~ msgid "WP e-Commerce"
+#~ msgstr "WP e-Commerce"
+
+#~ msgid "Purchase #%s"
+#~ msgstr "Aankoop #%s"
+
+#~ msgid "Gateway"
+#~ msgstr "Gateway"
+
+#~ msgid "Add New"
+#~ msgstr "Nieuwe toevoegen"
+
+#~ msgid "Add New Gateway"
+#~ msgstr "Nieuwe gateway toevoegen"
+
+#~ msgid "Edit Gateway"
+#~ msgstr "Gateway bewerken"
+
+#~ msgid "New Gateway"
+#~ msgstr "Nieuwe gateway"
+
+#~ msgid "All Gateways"
+#~ msgstr "Alle gateways"
+
+#~ msgid "View Gateway"
+#~ msgstr "Bekijk gateway"
+
+#~ msgid "Search Gateways"
+#~ msgstr "Zoek gateways"
+
+#~ msgid "No gateways found"
+#~ msgstr "Geen gateways gevonden."
+
+#~ msgid "No gateways found in Trash"
+#~ msgstr "Geen gateways gevonden in prullenbak."
+
+#~ msgid "Payment"
+#~ msgstr "Betaling"
+
+#~ msgid "Add New Payment"
+#~ msgstr "Nieuwe betaling toevoegen"
+
+#~ msgid "Edit Payment"
+#~ msgstr "Betaling bewerken"
+
+#~ msgid "New Payment"
+#~ msgstr "Nieuwe betaling"
+
+#~ msgid "All Payments"
+#~ msgstr "Alle betalingen"
+
+#~ msgid "View Payment"
+#~ msgstr "Bekijk betaling"
+
+#~ msgid "Search Payments"
+#~ msgstr "Betalingen zoeken"
+
+#~ msgid "No payments found"
+#~ msgstr "Geen betalingen gevonden."
+
+#~ msgid "No payments found in Trash"
+#~ msgstr "Geen betalingen gevonden in prullenbak."
+
+#~ msgid "iDEAL Branding"
+#~ msgstr "iDEAL-huisstijl"
+
+#~ msgid "Banners"
+#~ msgstr "Banners"
+
+#~ msgid "Banner 234&times;100"
+#~ msgstr "Banner 234&times;100"
+
+#~ msgid "Banner 234&times;100 (without campaign statements)"
+#~ msgstr "Banner 234&times;100 (zonder campagne-uitingen)"
+
+#~ msgid "Banner 234&times;60"
+#~ msgstr "Banner 234&times;60"
+
+#~ msgid "Banner 234&times;60 (without campaign statements)"
+#~ msgstr "Banner 234&times;60 (zonder campagne-uitingen)"
+
+#~ msgid "Banner 155&times;100"
+#~ msgstr "Banner 155&times;100"
+
+#~ msgid "Banner 155&times;100 (without campaign statements)"
+#~ msgstr "Banner 155&times;100 (zonder campagne-uitingen)"
+
+#~ msgid "Banner 155&times;55"
+#~ msgstr "Banner 155&times;55"
+
+#~ msgid "Banner 155&times;55 (without campaign statements)"
+#~ msgstr "Banner 155&times;55 (zonder campagne-uitingen)"
+
+#~ msgid "Banner 100&times;100"
+#~ msgstr "Banner 100&times;100"
+
+#~ msgid "Banner 100&times;100 (without campaign statements)"
+#~ msgstr "Banner 100&times;100 (zonder campagne-uitingen)"
+
+#~ msgid "Image"
+#~ msgstr "Afbeelding"
+
+#~ msgid "Code"
+#~ msgstr "Code"
+
+#~ msgid "General"
+#~ msgstr "Algemeen"
+
+#~ msgid "Mode"
+#~ msgstr "Modus"
+
+#~ msgid "Live"
+#~ msgstr "Live"
+
+#~ msgid "Test"
+#~ msgstr "Test"
+
+#~ msgid "Merchant ID"
+#~ msgstr "Winkelier ID"
+
+#~ msgid ""
+#~ "You receive the merchant ID (also known as: acceptant ID) from your iDEAL "
+#~ "provider."
+#~ msgstr ""
+#~ "Je ontvangt de winkelier ID (ook wel: merchant ID of acceptant ID) van je "
+#~ "iDEAL-provider."
+
+#~ msgid "Sub ID"
+#~ msgstr "Sub ID"
+
+#~ msgid "You receive the sub ID from your iDEAL provider, the default is: %s."
+#~ msgstr "Je ontvangt de sub ID van je iDEAL-provider, standaard is dit: %s."
+
+#~ msgid "Hash Key"
+#~ msgstr "Hash sleutel"
+
+#~ msgid ""
+#~ "You configure the hash key (also known as: key or secret key) in the "
+#~ "iDEAL dashboard of your iDEAL provider."
+#~ msgstr ""
+#~ "Je configureert de hash sleutel (ook wel: sleutel of geheime sleutel) in "
+#~ "het iDEAL-dashboard van je iDEAL provider."
+
+#~ msgid "Basic"
+#~ msgstr "Basis"
+
+#~ msgid "XML Notification URL"
+#~ msgstr "XML notificatie URL"
+
+#~ msgid "Mollie"
+#~ msgstr "Mollie"
+
+#~ msgid "Partner ID"
+#~ msgstr "Partner ID"
+
+#~ msgid ""
+#~ "Mollie.nl accountnummer. Op het gespecificeerde account wordt na "
+#~ "succesvolle betaling tegoed bijgeschreven."
+#~ msgstr ""
+#~ "Mollie.nl accountnummer. Op het gespecificeerde account wordt na "
+#~ "succesvolle betaling tegoed bijgeschreven."
+
+#~ msgid "Profile Key"
+#~ msgstr "Profiel sleutel"
+
+#~ msgid ""
+#~ "Hiermee kunt u een ander websiteprofielen selecteren om uw betaling aan "
+#~ "te linken. Gebruik de waarde uit het veld Key uit het profiel overzicht. "
+#~ "[<a href=\"%s\" target=\"_blank\">bekijk overzicht van uw profielen</a>]."
+#~ msgstr ""
+#~ "Hiermee kunt u een ander websiteprofielen selecteren om uw betaling aan "
+#~ "te linken. Gebruik de waarde uit het veld Key uit het profiel overzicht. "
+#~ "[<a href=\"%s\" target=\"_blank\">bekijk overzicht van uw profielen</a>]."
+
+#~ msgid "OmniKassa"
+#~ msgstr "OmniKassa"
+
+#~ msgid "Key Version"
+#~ msgstr "Sleutel versie"
+
+#~ msgid ""
+#~ "You can find the key version in the <a href=\"%s\" target=\"_blank"
+#~ "\">OmniKassa Download Dashboard</a>."
+#~ msgstr ""
+#~ "Je kunt de sleutel versie vind in het <a href=\"%s\" target=\"_blank"
+#~ "\">OmniKassa Download Dashboard</a>."
+
+#~ msgid "Buckaroo"
+#~ msgstr "Buckaroo"
+
+#~ msgid "Website Key"
+#~ msgstr "Website sleutel"
+
+#~ msgid ""
+#~ "You can find your Buckaroo website keys in the <a href=\"%s\" target="
+#~ "\"_blank\">Buckaroo Payment Plaza</a> under \"Profile\" » \"Website\"."
+#~ msgstr ""
+#~ "Je kunt je Buckaroo website sleutels vinden in de <a href=\"%s\" target="
+#~ "\"_blank\">Buckaroo Payment Plaza</a> onder \"Profiel\" » \"Website\"."
+
+#~ msgid "Secret Key"
+#~ msgstr "Geheime sleutel"
+
+#~ msgid ""
+#~ "You can find your Buckaroo secret key in the <a href=\"%s\" target="
+#~ "\"_blank\">Buckaroo Payment Plaza</a> under \"Configuration\" » \"Secret "
+#~ "Key for Digital Signature\"."
+#~ msgstr ""
+#~ "Je kunt je Buckaroo geheime sleutel vinden in de <a href=\"%s\" target="
+#~ "\"_blank\">Buckaroo Payment Plaza</a> onder \"Configuratie\" » \"Secret "
+#~ "key voor Digitale handtekening\"."
+
+#~ msgid "ICEPAY"
+#~ msgstr "ICEPAY"
+
+#~ msgid ""
+#~ "You can find your Merchant ID on your <a href=\"%s\" target=\"_blank"
+#~ "\">ICEPAY account page</a> under <a href=\"%s\" target=\"_blank\">My "
+#~ "websites</a>."
+#~ msgstr ""
+#~ "Je kunt je winkelier ID vinden op je <a href=\"%s\" target=\"_blank"
+#~ "\">ICEPAY account patina</a> onder <a href=\"%s\" target=\"_blank\">Mijn "
+#~ "websites</a>."
+
+#~ msgid "Secret Code"
+#~ msgstr "Geheime code"
+
+#~ msgid ""
+#~ "You can find your Secret Code on your <a href=\"%s\" target=\"_blank"
+#~ "\">ICEPAY account page</a> under <a href=\"%s\" target=\"_blank\">My "
+#~ "websites</a>."
+#~ msgstr ""
+#~ "Je kunt je geheime code vinden op je <a href=\"%s\" target=\"_blank"
+#~ "\">ICEPAY account pagina</a> onder <a href=\"%s\" target=\"_blank\">Mijn "
+#~ "websites</a>."
+
+#~ msgid "Sisow"
+#~ msgstr "Sisow"
+
+#~ msgctxt "sisow"
+#~ msgid "Merchant ID"
+#~ msgstr "Merchant ID"
+
+#~ msgid ""
+#~ "You can find your Merchant ID on your <a href=\"%s\" target=\"_blank"
+#~ "\">Sisow account page</a> under <a href=\"%s\" target=\"_blank\">My "
+#~ "profile</a>."
+#~ msgstr ""
+#~ "Je kunt je Merchant ID vinden op je <a href=\"%s\" target=\"_blank"
+#~ "\">Sisow account patina</a> onder <a href=\"%s\" target=\"_blank\">Mijn "
+#~ "profiel</a>."
+
+#~ msgctxt "sisow"
+#~ msgid "Merchant Key"
+#~ msgstr "Merchant Key"
+
+#~ msgid ""
+#~ "You can find your Merchant Key on your <a href=\"%s\" target=\"_blank"
+#~ "\">Sisow account page</a> under <a href=\"%s\" target=\"_blank\">My "
+#~ "profile</a>."
+#~ msgstr ""
+#~ "Je kunt je Merchant Key vinden op je <a href=\"%s\" target=\"_blank"
+#~ "\">Sisow account patina</a> onder <a href=\"%s\" target=\"_blank\">Mijn "
+#~ "profiel</a>."
+
+#~ msgid "TargetPay"
+#~ msgstr "TargetPay"
+
+#~ msgid "Layout Code"
+#~ msgstr "Layout code"
+
+#~ msgid ""
+#~ "De layoutcode waarop de betaling geboekt moet worden. Zie subaccounts."
+#~ msgstr ""
+#~ "De layoutcode waarop de betaling geboekt moet worden. Zie subaccounts."
+
+#~ msgid "Ogone"
+#~ msgstr "Ogone"
+
+#~ msgid "PSPID"
+#~ msgstr "PSPID"
+
+#~ msgid ""
+#~ "If you use the ABN AMRO - IDEAL Easy variant you can use <code>%s</code>."
+#~ msgstr ""
+#~ "Als u gebruik maakt van de ABN AMRO - iDEAL Easy variant kunt u <code>%s</"
+#~ "code> gebruiken."
+
+#~ msgid "Character encoding"
+#~ msgstr "Tekencodering"
+
+#~ msgid "Hash algorithm"
+#~ msgstr "Hash-algoritme"
+
+#~ msgid "SHA-IN Pass phrase"
+#~ msgstr "SHA-1-IN versleuteling"
+
+#~ msgid ""
+#~ "You configure the SHA-IN Pass phrase in the iDEAL dashboard "
+#~ "(Configuration &raquo; Technical information &raquo; Data and origin "
+#~ "verification) of your iDEAL provider."
+#~ msgstr ""
+#~ "Je configureert de SHA-IN versleuteling in de iDEAL-dashboard "
+#~ "(Configuratie &raquo; Technische informatie &raquo; Verificatie data en "
+#~ "herkomst) van je iDEAL provider."
+
+#~ msgid "SHA-OUT Pass phrase"
+#~ msgstr "SHA-1-OUT versleuteling"
+
+#~ msgid ""
+#~ "You configure the SHA-OUT Pass phrase in the iDEAL dashboard "
+#~ "(Configuration &raquo; Technical information &raquo; Transaction "
+#~ "feedback) of your iDEAL provider."
+#~ msgstr ""
+#~ "Je configureert de SHA-OUT versleuteling in de iDEAL-dashboard "
+#~ "(Configuratie &raquo; Technische informatie &raquo; Transactiefeedback) "
+#~ "van je iDEAL provider."
+
+#~ msgid "User ID"
+#~ msgstr "Gebruiker ID"
+
+#~ msgid "Password"
+#~ msgstr "Wachtwoord"
+
+#~ msgid "Qantani"
+#~ msgstr "Qantani"
+
+#~ msgctxt "qantani"
+#~ msgid "Merchant ID"
+#~ msgstr "Merchant ID"
+
+#~ msgctxt "qantani"
+#~ msgid "Secret"
+#~ msgstr "Secret"
+
+#~ msgctxt "qantani"
+#~ msgid "Key"
+#~ msgstr "Key"
+
+#~ msgid "Advanced"
+#~ msgstr "Geavanceerd"
+
+#~ msgid "Private Key Password"
+#~ msgstr "Privé sleutel wachtwoord"
+
+#~ msgid "Private Key"
+#~ msgstr "Privé sleutel"
+
+#~ msgid "Private Certificate"
+#~ msgstr "Privé certificaat"
+
+#~ msgid "Private Key and Certificate"
+#~ msgstr "Privé sleutel en certificaat"
+
+#~ msgid "Number Days Valid"
+#~ msgstr "Aantal dagen geldig"
+
+#~ msgid ""
+#~ "specify the length of time for which the generated certificate will be "
+#~ "valid, in days."
+#~ msgstr ""
+#~ "specificeer hoelang de gegenereerde certificaat geldig moet zijn in dagen."
+
+#~ msgid "Country"
+#~ msgstr "Land"
+
+#~ msgid "2 letter code [NL]"
+#~ msgstr "2 letters code [NL]"
+
+#~ msgid "State or Province"
+#~ msgstr "Staat of provincie"
+
+#~ msgid "full name [Friesland]"
+#~ msgstr "volledige naam [Friesland]"
+
+#~ msgid "Locality"
+#~ msgstr "Localiteit"
+
+#~ msgid "eg, city"
+#~ msgstr "bijvoorbeeld, stad"
+
+#~ msgid "Organization"
+#~ msgstr "Organisatie"
+
+#~ msgid "eg, company [Pronamic]"
+#~ msgstr "bijvoorbeeld, bedrijf [Pronamic]"
+
+#~ msgid "Organization Unit"
+#~ msgstr "Organisatie unit"
+
+#~ msgid "eg, section"
+#~ msgstr "bijvoorbeeld, sectie"
+
+#~ msgid "Common Name"
+#~ msgstr "Algemene naam"
+
+#~ msgid "eg, YOUR name"
+#~ msgstr "bijvoorbeeld, uw naam"
+
+#~ msgid ""
+#~ "Do you have an iDEAL subscription with Rabobank or ING Bank, please fill "
+#~ "in the domainname of your website."
+#~ msgstr ""
+#~ "Heb je een iDEAL-abonnement bij de Rabobank of ING bank, vul dan de "
+#~ "domeinnaam van deze website in."
+
+#~ msgid ""
+#~ "Do you have an iDEAL subscription with ABN AMRO, please fill in "
+#~ "\"ideal_<strong>company</strong>\", where \"company\" is your company "
+#~ "name (as specified in the request for the subscription). The value must "
+#~ "not exceed 25 characters."
+#~ msgstr ""
+#~ "Heb je een iDEAL-abonnement bij ABN AMRO, vul dan "
+#~ "\"ideal_<strong>bedrijf</strong>\", waar \"bedrijf\" is uw bedrijfsnaam "
+#~ "(zoals opgegevens bij de aanvraag van iDEAL). De waarde moet niet langer "
+#~ "zijn dan 25 tekens."
+
+#~ msgid "Email Address"
+#~ msgstr "E-mailadres"
+
+#~ msgid ""
+#~ "Unfortunately we could not generate a certificate resource from the given "
+#~ "CSR (Certificate Signing Request)."
+#~ msgstr ""
+#~ "Helaas konden we geen certificaat resource generen vanuit de opgeven CSR "
+#~ "(Certificate Signing Request)."
+
+#~ msgid "Unfortunately we could not generate a private key."
+#~ msgstr "We konden helaas niet een privé sleutel genereren."
+
+#~ msgid "Configuration updated, %s."
+#~ msgstr "Configuratie bijgewerkt, %s."
+
+#~ msgid "<a href=\"%s\">back to overview</a>"
+#~ msgstr "<a href=\"%s\">terug naar overzicht</a>"
+
+#~ msgid "Download Private Key"
+#~ msgstr "Download privé sleutel"
+
+#~ msgid "SHA Fingerprint"
+#~ msgstr "SHA vingerafdruk"
+
+#~ msgid "M j, Y @ G:i"
+#~ msgstr "j M Y @ G:i"
+
+#~ msgid "Valid From"
+#~ msgstr "Geldig van"
+
+#~ msgid "Valid To"
+#~ msgstr "Geldig tot"
+
+#~ msgid "Download Private Certificate"
+#~ msgstr "Download privé certificaat"
+
+#~ msgid "Variant"
+#~ msgstr "Variant"
+
+#~ msgid "Save"
+#~ msgstr "Opslaan"
+
+#~ msgid "Update"
+#~ msgstr "Update"
+
+#~ msgid "Private Key and Certificate Generator"
+#~ msgstr "Privé sleutel en certificaat generator"
+
+#~ msgid "Generate"
+#~ msgstr "Genereer"
+
+#~ msgid ""
+#~ "You have to use the following commands to generate an private key and "
+#~ "certificate for iDEAL v3:"
+#~ msgstr ""
+#~ "Je moet de volgende commando's gebruiken om een privé sleulel en "
+#~ "certificaat voor iDEAL v3 te genereren:"
+
+#~ msgid "filename"
+#~ msgstr "bestandsnaam"
+
+#~ msgid "iDEAL Tests"
+#~ msgstr "iDEAL-tests"
+
+#~ msgid "We could not find any configuration with the ID \"%s\"."
+#~ msgstr "We konden geen configuratie vinden met de ID \"%s\"."
+
+#~ msgid "Info"
+#~ msgstr "Info"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Name"
+#~ msgstr "Naam"
+
+#~ msgid "Configuration deleted."
+#~ msgid_plural "Configurations deleted."
+#~ msgstr[0] "Configuratie verwijderd."
+#~ msgstr[1] "Configuraties verwijderd."
+
+#~ msgid "Bulk Actions"
+#~ msgstr "Acties"
+
+#~ msgid "Delete"
+#~ msgstr "Verwijder"
+
+#~ msgid "Apply"
+#~ msgstr "Toepassen"
+
+#~ msgid "Dashboard"
+#~ msgstr "Dashboard"
+
+#~ msgid "Number Payments"
+#~ msgstr "Aantal betalingen"
+
+#~ msgid "Edit"
+#~ msgstr "Bewerken"
+
+#~ msgid "Tests"
+#~ msgstr "Tests"
+
+#~ msgid "Not available"
+#~ msgstr "Niet beschikbaar"
+
+#~ msgid "iDEAL Configurations"
+#~ msgstr "iDEAL-configuraties"
+
+#~ msgid "iDEAL Documentation"
+#~ msgstr "iDEAL-documentatie"
+
+#~ msgid "Version"
+#~ msgstr "Versie"
+
+#~ msgid "Message"
+#~ msgstr "Bericht"
+
+#~ msgid "Detail"
+#~ msgstr "Detail"
+
+#~ msgid "Suggested Action"
+#~ msgstr "Voorgestelde actie"
+
+#~ msgid "Consumer Message"
+#~ msgstr "Consumenten bericht"
+
+#~ msgid "iDEAL Pages Generator"
+#~ msgstr "iDEAL-pagina's generator"
+
+#~ msgid ""
+#~ "This page allows you to easily create pages for each iDEAL payment status."
+#~ msgstr ""
+#~ "Via deze pagina kunt u eenvoudig pagina's aanmaken voor de verschillende "
+#~ "iDEAL-betalingsstatussen."
+
+#~ msgid "ideal"
+#~ msgstr "ideal"
+
+#~ msgid "iDEAL payment error"
+#~ msgstr "iDEAL-betalingsfout"
+
+#~ msgid "error"
+#~ msgstr "fout"
+
+#~ msgid ""
+#~ "<p>Unfortunately an error has occurred during your iDEAL payment.</p>"
+#~ msgstr "<p>Helaas is er een fout opgetreden tijdens uw iDEAL-betaling.</p>"
+
+#~ msgid "iDEAL payment canceled"
+#~ msgstr "iDEAL-betaling geannuleerd"
+
+#~ msgid "cancelled"
+#~ msgstr "geannuleerd"
+
+#~ msgid "<p>You canceled the iDEAL payment.</p>"
+#~ msgstr "<p>U heeft de iDEAL-betaling geannuleerd.</p>"
+
+#~ msgid "iDEAL payment unknown"
+#~ msgstr "iDEAL-betaling onbekend"
+
+#~ msgid "unknown"
+#~ msgstr "onbekend"
+
+#~ msgid "<p>The status of your iDEAL payment is unknown.</p>"
+#~ msgstr "<p>De status van uw iDEAL-betaling is onbekend.</p>"
+
+#~ msgid "iDEAL payment expired"
+#~ msgstr "iDEAL-betaling verlopen"
+
+#~ msgid "expired"
+#~ msgstr "verlopen"
+
+#~ msgid "<p>Unfortunately your iDEAL payment session has expired.</p>"
+#~ msgstr "<p>Uw iDEAL-betalingssessie is helaas verlopen.</p>"
+
+#~ msgid "iDEAL payment completed"
+#~ msgstr "iDEAL-betaling voltooid"
+
+#~ msgid "completed"
+#~ msgstr "voltooid"
+
+#~ msgid "<p>The payment process is successfully completed.</p>"
+#~ msgstr "<p>Het betalingsproces is succesvol voltooid.</p>"
+
+#~ msgid "Slug"
+#~ msgstr "Slug"
+
+#~ msgid "Content"
+#~ msgstr "Inhoud"
+
+#~ msgid "Meta"
+#~ msgstr "Meta"
+
+#~ msgid "Generate Pages"
+#~ msgstr "Genereer pagina's"
+
+#~ msgid "The payment status is: %s"
+#~ msgstr "De betaling status is: %s"
+
+#~ msgid "iDEAL Payment"
+#~ msgstr "iDEAL-betaling"
+
+#~ msgid "Expiration Period"
+#~ msgstr "Vervalperiode"
+
+#~ msgid "Account Number"
+#~ msgstr "Rrekeningnummer"
+
+#~ msgid "IBAN"
+#~ msgstr "IBAN"
+
+#~ msgid "BIC"
+#~ msgstr "BIC"
+
+#~ msgid "City"
+#~ msgstr "Plaats"
+
+#~ msgid "Status Request"
+#~ msgstr "Status verzoek"
+
+#~ msgid "iDEAL Payments"
+#~ msgstr "iDEAL-betalingen"
+
+#~ msgid "Provider"
+#~ msgstr "Provider"
+
+#~ msgid "Redirecting&hellip;"
+#~ msgstr "Doorverwijzen&hellip;"
+
+#~ msgid ""
+#~ "You will be automatically redirected to the online payment environment."
+#~ msgstr "U wordt automatisch doorgestuurd naar de online betaalomgeving."
+
+#~ msgid ""
+#~ "Please click the button below if you are not automatically redirected."
+#~ msgstr ""
+#~ "Klik op onderstaande knop als u niet automatisch wordt doorgestuurd."
+
+#~ msgid "iDEAL Settings"
+#~ msgstr "iDEAL-instellingen"
+
+#~ msgid "General Settings"
+#~ msgstr "Algemene instellingen"
+
+#~ msgid "Support License Key"
+#~ msgstr "Support licentiecode"
+
+#~ msgid ""
+#~ "The license key is used for access to automatic upgrades and support."
+#~ msgstr ""
+#~ "De licentiecode wordt gebruikt voor automatische upgrades en support."
+
+#~ msgid "License Information"
+#~ msgstr "Licentie informatie"
+
+#~ msgid "No license information available."
+#~ msgstr "Geen licentie informatie beschikbaar."
+
+#~ msgid "Activation Date"
+#~ msgstr "Activatie datum"
+
+#~ msgid "Y/m/d g:i:s A"
+#~ msgstr "d-m-Y H:i"
+
+#~ msgid "Expiration Date"
+#~ msgstr "Verval datum"
+
+#~ msgid "Supported Plugins"
+#~ msgstr "Ondersteunde plugins"
+
+#~ msgid "Event Espresso Lite"
+#~ msgstr "Event Espresso Lite"
+
+#~ msgid "Installation Status"
+#~ msgstr "Installatie status"
+
+#~ msgid "Site URL"
+#~ msgstr "Site URL"
+
+#~ msgid "Home URL"
+#~ msgstr "Home URL"
+
+#~ msgid "PHP Version"
+#~ msgstr "PHP versie"
+
+#~ msgid "Pronamic iDEAL requires PHP 5.2 or above."
+#~ msgstr "Pronamic iDEAL vereist PHP 5.2 of hoger."
+
+#~ msgid "MySQL Version"
+#~ msgstr "MySQL versie"
+
+#~ msgid "Pronamic iDEAL requires MySQL 5 or above."
+#~ msgstr "Pronamic iDEAL vereist MySQL 5 of hoger."
+
+#~ msgid "WordPress Version"
+#~ msgstr "WordPress versie"
+
+#~ msgid "Pronamic iDEAL requires WordPress 3.2 or above."
+#~ msgstr "Pronamic iDEAL vereist WordPress 3.2 of hoger."
+
+#~ msgid "Time"
+#~ msgstr "Tijd"
+
+#~ msgid "OpenSSL"
+#~ msgstr "OpenSSL"
+
+#~ msgid "Registered Hashing Algorithms"
+#~ msgstr "Geregistreerde hashing algoritmen"
+
+#~ msgid "Pronamic iDEAL requires the \"sha1\" hashing algorithm."
+#~ msgstr "Pronamic iDEAL vereist de \"sha1\" hashing algoritme."
+
+#~ msgid "iDEAL Status"
+#~ msgstr "iDEAL-status"
+
+#~ msgid ""
+#~ "The <a href=\"%s\" target=\"_blank\">iDEAL-status.nl</a> webservice "
+#~ "monitors the following status of the various iDEAL banks:"
+#~ msgstr ""
+#~ "De <a href=\"%s\" target=\"_blank\">iDEAL-status.nl</a> webservice "
+#~ "monitort de volgende status van de verscheidene iDEAL-banken:"
+
+#~ msgid "Issuer Name"
+#~ msgstr "Issuer naam"
+
+#~ msgid "Issuer ID"
+#~ msgstr "Issuer ID"
+
+#~ msgid "Mandatory Tests"
+#~ msgstr "Verplichte tests"
+
+#~ msgid "Order"
+#~ msgstr "Bestelling"
+
+#~ msgid "Expected result if integration is correct"
+#~ msgstr "Verwacht resultaat als de integratie juist is"
+
+#~ msgid "Actions"
+#~ msgstr "Acties"
+
+#~ msgid "Transaction with <code>amount</code> = %s:"
+#~ msgstr "Transactie met <code>amount</code> = %s:"
+
+#~ msgid "Test &euro; %s"
+#~ msgstr "Test &euro; %s"
+
+#~ msgid "iDEAL Variants"
+#~ msgstr "iDEAL-varianten"
+
+#~ msgid "Method"
+#~ msgstr "Methode"
+
+#~ msgid "Feedback Payment Status"
+#~ msgstr "Feedback betaling status"
+
+#~ msgid "Easy"
+#~ msgstr "Easy"
+
+#~ msgid "Internetkassa"
+#~ msgstr "Internetkassa"
+
+#~ msgid "Advanced v3"
+#~ msgstr "Geavanceerd v3"
+
+#~ msgid "HTML Form"
+#~ msgstr "HTML formulier"
+
+#~ msgid "HTTP Redirect"
+#~ msgstr "HTTP redirect"
+
+#~ msgid "Unkown"
+#~ msgstr "Onbekend"
+
+#~ msgid "iDEAL Feed"
+#~ msgstr "iDEAL-feed"
+
+#~ msgid "Feed updated, %s."
+#~ msgstr "Feed bijgewerkt, %s."
+
+#~ msgid "back to list"
+#~ msgstr "terug naar lijst"
+
+#~ msgid "Gravity Form"
+#~ msgstr "Gravity Form"
+
+#~ msgid "&mdash; Select a form &mdash;"
+#~ msgstr "&mdash; Selecteer een formulier &mdash;"
+
+#~ msgid "No iDEAL configurations found, %s."
+#~ msgstr "Geen iDEAL-configuraties gevonden, %s."
+
+#~ msgid "create an iDEAL configuration"
+#~ msgstr "creëer een iDEAL-configuratie"
+
+#~ msgid "&mdash; Select configuration &mdash; "
+#~ msgstr "&mdash; Selecteer configuratie &mdash;"
+
+#~ msgid "Transaction Description"
+#~ msgstr "Transactie beschrijving"
+
+#~ msgid ""
+#~ "Maximum number of charachters is 32, you should also consider the use of "
+#~ "variables Gravity Forms. An generated description that is longer than 32 "
+#~ "characters will be automatically truncated."
+#~ msgstr ""
+#~ "Maximum aantal tekens 32 is, hou daarbij ook rekening met het gebruik van "
+#~ "Gravity Forms variabelen. Een gegeneerde beschrijving die langer is dan "
+#~ "32 tekens zal automatisch worden afgekapt."
+
+#~ msgid ""
+#~ "Merge Tag Examples: Entry Id = <code>{entry_id}</code>, Form Id = <code>"
+#~ "{form_id}</code>, Form Title = <code>{form_title}</code>"
+#~ msgstr ""
+#~ "Samenvoegen tag voorbeelden: Inzending ID = <code>{entry_id}</code>, "
+#~ "Formulier ID = <code>{form_id}</code>, Formulier titel = <code>"
+#~ "{form_title}</code>"
+
+#~ msgid "Options"
+#~ msgstr "Opties"
+
+#~ msgid "Send notifications only when payment is received."
+#~ msgstr "Verstuur notificaties alleen wanneer de betaling is ontvangen. "
+
+#~ msgid "Send admin notification only when payment is received."
+#~ msgstr ""
+#~ "Verstuur beheerder notificatie alleen wanneer de betaling is ontvangen. "
+
+#~ msgid "Send user notification only when payment is received."
+#~ msgstr ""
+#~ "Verstuur gebruiker notificatie alleen wanneer de betaling is ontvangen. "
+
+#~ msgid "Create post only when payment is received."
+#~ msgstr "Maak alleen een bericht wanneer de betaling is ontvangen."
+
+#~ msgid "iDEAL Condition"
+#~ msgstr "iDEAL-conditie"
+
+#~ msgid "Enable"
+#~ msgstr "Inschakelen"
+
+#~ msgid "Send to iDEAL if "
+#~ msgstr "Verstuur naar iDEAL als"
+
+#~ msgid "is"
+#~ msgstr "is"
+
+#~ msgid "is not"
+#~ msgstr "is niet"
+
+#~ msgid ""
+#~ "To create a condition, your form must have a drop down, checkbox or "
+#~ "multiple choice field."
+#~ msgstr ""
+#~ "Om een conditie in te stellen moet je formulier een selectieveld, "
+#~ "selectievakje of meerkeuzeveld bevatten."
+
+#~ msgid "Fields"
+#~ msgstr "Velden"
+
+#~ msgid "First Name"
+#~ msgstr "Voornaam"
+
+#~ msgid "Last Name"
+#~ msgstr "Achternaam"
+
+#~ msgid "Address"
+#~ msgstr "Adres"
+
+#~ msgid "Address 2"
+#~ msgstr "Adres 2"
+
+#~ msgid "State"
+#~ msgstr "Provincie"
+
+#~ msgid "Zip"
+#~ msgstr "Postcode"
+
+#~ msgid "Status Links"
+#~ msgstr "Status koppelingen"
+
+#~ msgid "Cancel"
+#~ msgstr "Annuleren"
+
+#~ msgid "Error"
+#~ msgstr "Fout"
+
+#~ msgid "Page:"
+#~ msgstr "Pagina:"
+
+#~ msgid "&mdash; Select &mdash;"
+#~ msgstr "&mdash; Selecteren &mdash;"
+
+#~ msgid "URL:"
+#~ msgstr "URL:"
+
+#~ msgid "Customer Name"
+#~ msgstr "Klant  naam"
+
+#~ msgid "E-Mail Address"
+#~ msgstr "E-mailadres"
+
+#~ msgid "Owner Address"
+#~ msgstr "Eigenaar adres"
+
+#~ msgid "Owner City"
+#~ msgstr "Eigenaar woonplaats"
+
+#~ msgid "Owner ZIP"
+#~ msgstr "Eigenaar postcode"
+
+#~ msgid "Update user role"
+#~ msgstr "Update gebruikersrol"
+
+#~ msgid "iDEAL Feeds"
+#~ msgstr "iDEAL-feeds"
+
+#~ msgid "Feed deleted."
+#~ msgid_plural "Feeds deleted."
+#~ msgstr[0] "Feed verwijderd."
+#~ msgstr[1] "Feeds verwijderd."
+
+#~ msgid "Form"
+#~ msgstr "Formulier"
+
+#~ msgid "Condition"
+#~ msgstr "Conditie"
+
+#~ msgid "To get started, please configure your %s."
+#~ msgstr "Om te beginnen configureer je %s."
+
+#~ msgid "Active"
+#~ msgstr "Actief"
+
+#~ msgid "Inactive"
+#~ msgstr "Inactief"
+
+#~ msgid "Enabled"
+#~ msgstr "Ingeschakeld"
+
+#~ msgid "Disabled"
+#~ msgstr "Uitgeschakeld"
+
+#~ msgid "Search Lead"
+#~ msgstr "Zoek inzending"
+
+#~ msgid "iDEAL Buttons Code Generator"
+#~ msgstr "iDEAL-buttons code generator"
+
+#~ msgid "I want to charge: %s / %s"
+#~ msgstr "Ik wil %s in rekening brengen voor %s"
+
+#~ msgid "for access to level %s content"
+#~ msgstr "voor toegang tot %s niveau content"
+
+#~ msgid "Description:"
+#~ msgstr "Beschrijving:"
+
+#~ msgid "Generate Shortcode"
+#~ msgstr "Genereer shortcode"
+
+#~ msgid "Button Shortcode"
+#~ msgstr "Button shortcode"
+
+#~ msgid "Merchant Key"
+#~ msgstr "Winkelier sleutel"
+
+#, fuzzy
+#~ msgid "Merchant Secret"
+#~ msgstr "Merchant Key"
+
+#~ msgid "version %s"
+#~ msgstr "versie %s"
+
+#~ msgid "%s"
+#~ msgstr "%s"
+
+#~ msgid "One Time ( for 2 day access, non-recurring )"
+#~ msgstr "Eenmalig ( voor 2 dagen toegang, niet terugkerende )"
+
+#~ msgid "You receive the PSPID from your iDEAL provider."
+#~ msgstr "Je ontvangt de PSPID van je iDEAL-provider."
+
+#~ msgid "Could not load the XML response meessage from the iDEAL provider."
+#~ msgstr "Kon het XML antwoord bericht van de iDEAL-provider niet laden."
+
+#~ msgid "Test Case %s"
+#~ msgstr "Test %s"
+
+#~ msgid "iDEAL settings page"
+#~ msgstr "iDEAL-instellingen pagina"
+
+#~ msgid "iDEAL Issuer"
+#~ msgstr "iDEAL-bank"
+
+#~ msgid "Payment of the order has been cancelled."
+#~ msgstr "Betaling van de bestelling is geannuleerd."
+
+#~ msgid "An unexpected error occured during transaction."
+#~ msgstr "Een overwachte fout vond plaats tijdens de transactie."
+
+#~ msgid "The maximum transaction time expired."
+#~ msgstr "De maximale transactie tijd is verlopen."
+
+#~ msgid "The transaction failed for an unknown reason."
+#~ msgstr "De transactie is mislukt om een onbekende reden."
+
+#~ msgid "Transaction was not finished and was left open."
+#~ msgstr "Transactie is niet afgerond en is open gelaten."
+
+#~ msgid "Errors"
+#~ msgstr "Fouten"
+
+#~ msgid "%s (error code: %s)"
+#~ msgstr "%s (foutcode: %s)"
+
+#~ msgid "Retrieve Issuers Lists"
+#~ msgstr "Ophalen banken lijsten"
+
+#~ msgid "Type"
+#~ msgstr "Type"
+
+#~ msgid "Kassa"
+#~ msgstr "Kassa"
+
+#~ msgid "Shipping"
+#~ msgstr "Verzending"
+
+#~ msgid "Tax"
+#~ msgstr "BTW"
+
+#~ msgid ""
+#~ "Thank you for your order, please click the button below to pay with iDEAL."
+#~ msgstr ""
+#~ "Hartelijk dank voor uw bestelling, klik dan op de onderstaande knop om te "
+#~ "betalen met iDEAL."
+
+#~ msgid ""
+#~ "We are awaiting your payment, to pay for this order please use the "
+#~ "following link: <a href=\"%s\">Pay</a>"
+#~ msgstr ""
+#~ "Wij wachten op uw betaling, om te betalen voor deze bestelling kunt u de "
+#~ "volgende link gebruiken: <a href=\"%s\">Betalen</a>"
+
+#~ msgid "Delete iDEAL plugin"
+#~ msgstr "Verwijder iDEAL plugin"
+
+#~ msgid ""
+#~ "Warning! This will delete all iDEAL configurations, payments and options."
+#~ msgstr ""
+#~ "Waarschuwing! Deze operatie verwijderd alle iDEAL configuraties, "
+#~ "betalingen en opties."
+
+#~ msgid "Uninstall"
+#~ msgstr "Verwijder"
+
+#~ msgid "Customer Message"
+#~ msgstr "Klant  bericht"
+
+#, fuzzy
+#~ msgid "Method Title"
+#~ msgstr "Methode"
+
+#~ msgid "shipping"
+#~ msgstr "verzending"
+
+#~ msgid "Execute"
+#~ msgstr "Uitvoeren"
+
+#~ msgid "Gravity Forms payment %s"
+#~ msgstr "Gravity Forms betaling %s"
+
+#, fuzzy
+#~ msgid "iDEAL Feed Settings"
+#~ msgstr "iDEAL instellingen"
+
+#~ msgid "iDEAL Form Settings"
+#~ msgstr "iDEAL formulier instellingen"
+
+#~ msgid "Links"
+#~ msgstr "Koppelingen"
+
+#, fuzzy
+#~ msgid "iDEAL Purchase"
+#~ msgstr "iDEAL aankopen"
+
+#~ msgid "iDEAL Transactions"
+#~ msgstr "iDEAL transacties"
+
+#~ msgid "Currency"
+#~ msgstr "Valuta"
+
+#~ msgid "Language"
+#~ msgstr "Taal"
+
+#~ msgid "Entrance Code"
+#~ msgstr "Entree code"
+
+#~ msgid "Rabobank"
+#~ msgstr "Rabobank"
+
+#~ msgid "ING"
+#~ msgstr "ING"
+
+#~ msgid "ABN AMRO"
+#~ msgstr "ABN AMRO"
+
+#~ msgid "Search Transactions"
+#~ msgstr "Zoek transacties"
+
+#~ msgid "View all categories"
+#~ msgstr "Bekijk alle categorieën"
+
+#~ msgctxt "link name"
+#~ msgid "Name"
+#~ msgstr "Naam"
+
+#, fuzzy
+#~ msgid "URL"
+#~ msgstr "URL:"
+
+#, fuzzy
+#~ msgid "Visible"
+#~ msgstr "Uitgeschakeld"
+
+#~ msgid "Production"
+#~ msgstr "Productie"
+
+#, fuzzy
+#~ msgid "iDEAL Setting"
+#~ msgstr "iDEAL instellingen"
+
+#~ msgid "Select a form"
+#~ msgstr "Selecteer een formulier"
+
+#~ msgid "Select settings"
+#~ msgstr "Selecteer conf"
+
+#~ msgid "Acquirer"
+#~ msgstr "Acquirer"
+
+#~ msgid "Uninstall iDEAL Add-On"
+#~ msgstr "Verwijder iDEAL Add-On"
+
+#, fuzzy
+#~ msgid "Edit Feed"
+#~ msgstr "Bewerken"
+
+#~ msgctxt "post type general name"
+#~ msgid "Blocks"
+#~ msgstr "Blokken"
+
+#~ msgctxt "post type singular name"
+#~ msgid "Block"
+#~ msgstr "Blok"
+
+#~ msgid "Add New Block"
+#~ msgstr "Nieuw blok toevoegen"
+
+#~ msgid "Edit Block"
+#~ msgstr "Blok wijzigen"
+
+#~ msgid "New Block"
+#~ msgstr "Nieuw blok"
+
+#~ msgid "View Block"
+#~ msgstr "Bekijk blok"
+
+#~ msgid "Search Blocks"
+#~ msgstr "Blokken zoeken"
+
+#~ msgid "No blocks found in Trash"
+#~ msgstr "Geen blokken gevonden in prullenbak"
+
+#~ msgid "Parent Block:"
+#~ msgstr "Bovenliggende blok:"
+
+#~ msgid "Blocks"
+#~ msgstr "Blokken"
+
+#~ msgid "http://pronamic.eu/"
+#~ msgstr "http://pronamic.nl/"
+
+#~ msgid "http://pronamic.eu/contact/"
+#~ msgstr "http://pronamic.nl/contact/"
+
+#~ msgid "Support"
+#~ msgstr "Support"
+
+#~ msgid "Telephone: %s"
+#~ msgstr "Telefoon: %s"
+
+#~ msgid "+31 516 481 200"
+#~ msgstr "0516 481 200"
+
+#~ msgid "support@pronamic.eu"
+#~ msgstr "support@pronamic.nl"
+
+#~ msgid "News"
+#~ msgstr "Nieuws"
+
+#~ msgid "Pronamic News"
+#~ msgstr "Pronamic nieuws"
+
+#~ msgid "Concept and realisation by %s"
+#~ msgstr "Concept en realisatie door %s"
+
+#~ msgid "Pronamic - Internet, marketing & WordPress specialist"
+#~ msgstr "Pronamic - Internet, marketing & WordPress specialist"
+
+#~ msgid "Developed by:"
+#~ msgstr "Ontwikkeld door:"
+
+#~ msgid "info@pronamic.eu"
+#~ msgstr "info@pronamic.nl"
+
+#~ msgid "T: %s"
+#~ msgstr "T: %s"
+
+#~ msgid "Latitude"
+#~ msgstr "Breedtegraad"
+
+#~ msgid "Longitude"
+#~ msgstr "Lengtegraad"
+
+#~ msgid "Width"
+#~ msgstr "Breedte"
+
+#~ msgid "Height"
+#~ msgstr "Hoogte"
+
+#~ msgid "Show Google Maps"
+#~ msgstr "Google Maps weergeven"
+
+#~ msgid "Configuration - Pronamic Google Maps"
+#~ msgstr "Configuratie - Pronamic Google Maps"
+
+#~ msgid "Post type"
+#~ msgstr "Bericht type"
+
+#~ msgid "Activate Google Maps"
+#~ msgstr "Activeer Google Maps"
+
+#~ msgid "Use this widget to add an Google Maps as a widget."
+#~ msgstr "Gebruik deze widget om Google Maps toe te voegen."
+
+#~ msgid "Google Maps"
+#~ msgstr "Google Maps"
+
+#~ msgid "pixels"
+#~ msgstr "pixels"
+
+#~ msgid "percent"
+#~ msgstr "procent"
+
+#~ msgid "Pronamic Google Maps"
+#~ msgstr "Pronamic Google Maps"
+
+#~ msgid "Donate $10, $20 or $50!"
+#~ msgstr "Doneer $10, $20 of $50!"
+
+#~ msgid ""
+#~ "This plugin has cost us countless hours of work, if you use it, please "
+#~ "donate a token of your appreciation!"
+#~ msgstr ""
+#~ "Het ons veel uren werken gekost om deze plugin te ontwikkelen, als je het "
+#~ "gebruikt, doneer a.u.b. voor je waardering!"
+
+#~ msgid "Latest news from Pronamic"
+#~ msgstr "Laatste nieuws van Pronamic"
+
+#~ msgid "no news items, feed might be broken..."
+#~ msgstr "geen nieuws items, feed is waarschijnlijk niet bereikbaar..."
+
+#~ msgid "Subscribe with RSS"
+#~ msgstr "Aanmelden voor RSS"
+
+#~ msgid "Subscribe by e-mail"
+#~ msgstr "Aanmelden via e-mail"
+
+#~ msgid "Like this plugin?"
+#~ msgstr "Vind je deze plugin leuk?"
+
+#~ msgid "Why not do any or all of the following:"
+#~ msgstr "Waarom doe je niet één van de volgende dingen:"
+
+#~ msgid "Link to it so other folks can find out about it."
+#~ msgstr "Link naar ons zodat anderen deze plugin ook ontdekken."
+
+#~ msgid "Give it a good rating on WordPress.org."
+#~ msgstr "Geef het een goede score op WordPress.org."
+
+#~ msgid "Let other people know that it works with your WordPress setup."
+#~ msgstr "Laat anderen weten dat het werk op je WordPress installatie."
+
+#~ msgid "Save Changes"
+#~ msgstr "Wijzigingen opslaan"
+
+#~ msgid "Found a bug?"
+#~ msgstr "Bug gevonden?"
