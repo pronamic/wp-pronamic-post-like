@@ -46,12 +46,8 @@ class Pronamic_WP_PostLikePlugin {
 		require_once $this->path . 'includes/gravityforms.php';
 		
 		add_action( 'plugins_loaded', array( $this, 'plugins_loaded' ) );
-
-		$this->types = array(
-			'facebook_like' => __( 'I liked this post on Facebook.', 'pronamic_post_like' ),
-			'twitter_tweet' => __( 'I tweeted this post on Twitter.', 'pronamic_post_like' ),
-			'user_vote'     => __( 'I voted on this post with my user account.', 'pronamic_post_like' )
-		);
+		
+		add_action( 'init', array( $this, 'init' ) );
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ), 20 );
 
@@ -59,7 +55,13 @@ class Pronamic_WP_PostLikePlugin {
 		add_action( 'template_redirect', array( $this, 'maybe_vote' ) );
 
 		add_action( 'wp_update_comment_count', array( $this, 'update_comment_count' ) );
-
+		
+		if ( is_admin() ) {
+		
+		} else {
+			add_filter( 'comments_clauses', array( $this, 'comments_clauses' ) );
+		}
+		
 		// AJAX
 		$action = 'pronamic_social_vote';
 
@@ -72,6 +74,17 @@ class Pronamic_WP_PostLikePlugin {
 	 */
 	public function plugins_loaded() {
 		load_plugin_textdomain( 'pronamic_post_like', false, dirname( plugin_basename( $this->file ) ) . '/languages/' );
+	}
+
+	/**
+	 * Initialize
+	 */
+	public function init() {
+		$this->types = array(
+			'user_vote'     => __( 'I voted on this post with my user account.', 'pronamic_post_like' ),
+			'facebook_like' => __( 'I liked this post on Facebook.', 'pronamic_post_like' ),
+			'twitter_tweet' => __( 'I tweeted this post on Twitter.', 'pronamic_post_like' )
+		);
 	}
 
 	/**
@@ -204,6 +217,10 @@ class Pronamic_WP_PostLikePlugin {
 			$comment_data['comment_content'] = $this->types[$type];
 				
 			$result = wp_insert_comment( $comment_data );
+			
+			if ( $result ) {
+
+			}
 		}
 		
 		return $result;
@@ -242,13 +259,13 @@ class Pronamic_WP_PostLikePlugin {
 	 * Maybe like
 	 */
 	public function maybe_like() {
-		if ( filter_has_var( INPUT_GET, 'like' ) && wp_verify_nonce( filter_input( INPUT_GET, 'like_nonce', FILTER_SANITIZE_STRING ), 'pronamic_like' ) ) {
-			$type = filter_input( INPUT_GET, 'like', FILTER_SANITIZE_STRING );
-			
-			$post_id = get_the_ID();
+		if ( filter_has_var( INPUT_GET, 'like_id' ) && wp_verify_nonce( filter_input( INPUT_GET, 'like_nonce', FILTER_SANITIZE_STRING ), 'pronamic_like' ) ) {
+			$post_id = filter_input( INPUT_GET, 'like_id', FILTER_SANITIZE_STRING );
+			$type    = filter_input( INPUT_GET, 'like_type', FILTER_SANITIZE_STRING );
 
 			$url = add_query_arg( array(
-				'like'       => false,
+				'like_id'    => false,
+				'like_type'  => false,
 				'like_nonce' => false,
 				'liked'      => 'no'
 			) ) . '#like-' . $type;
@@ -368,11 +385,15 @@ class Pronamic_WP_PostLikePlugin {
 	 * @param string $post_id
 	 * @return string
 	 */
-	public function get_like_link( $comment = 'like', $post_id = null ) {
+	public function get_like_link( $type = 'user_vote', $post_id = null ) {
 		$post_id = ( null === $post_id ) ? get_the_ID() : $post_id;
 		
-		$link = get_permalink( $post_id );
-		$link = add_query_arg( 'like', $comment, $link );
+		$link = add_query_arg( array(
+			'like_id'   => $post_id,
+			'like_type' => $type,
+			'liked'     => false
+		) );
+
 		$link = wp_nonce_url( $link, 'pronamic_like', 'like_nonce' );
 		
 		return $link;
@@ -436,10 +457,14 @@ class Pronamic_WP_PostLikePlugin {
 	 * 
 	 * @var $comment_type
 	 */
-	public function get_comment_count( $post_id, $comment_type ) {
+	public function get_comment_count( $post_id, $comment_type = null ) {
 		global $wpdb;
 		
 		// Vars
+		if ( empty( $comment_type ) ) {
+			$comment_type = $this->get_types();
+		}
+
 		if ( ! is_array( $comment_type ) ) {
 			$comment_type = array( $comment_type );
 		}
@@ -473,6 +498,7 @@ class Pronamic_WP_PostLikePlugin {
 		$comment_type = $this->get_types();
 		$comment_type = "'" . join( "', '", $comment_type ) . "'";
 
+		// Comment count
 		$new = (int) $wpdb->get_var( $wpdb->prepare( "
 			SELECT
 				COUNT(*)
@@ -488,6 +514,26 @@ class Pronamic_WP_PostLikePlugin {
 		) );
 
 		$wpdb->update( $wpdb->posts, array( 'comment_count' => $new ), array( 'ID' => $post_id ) );
+		
+		// Like count
+		$like_count = $this->get_comment_count( $post_id );
+		
+		update_post_meta( $post_id, '_pronamic_post_like_count', $like_count );
+	}
+	
+	/**
+	 * Comments clauses
+	 * 
+	 * @param array $clauses
+	 * @return https://github.com/WordPress/WordPress/blob/3.6.1/wp-includes/comment.php#L367
+	 */
+	public function comments_clauses( $clauses ) {
+		$comment_type = $this->get_types();
+		$comment_type = "'" . join( "', '", $comment_type ) . "'";
+
+		$clauses['where'] .= " AND comment_type NOT IN ($comment_type)";
+		
+		return $clauses;
 	}
 }
 

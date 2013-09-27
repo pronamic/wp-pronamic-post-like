@@ -17,10 +17,10 @@ function pronamic_post_like_can_vote( $post_id = null, $comment_type = 'pronamic
  * @param string $comment
  * @param string $post_id
  */
-function pronamic_get_post_like_link( $comment = 'like', $post_id = null ) {
+function pronamic_get_post_like_link( $type = 'user_vote', $post_id = null ) {
 	global $pronamic_post_like_plugin;
 
-	return $pronamic_post_like_plugin->get_like_link( $comment, $post_id );
+	return $pronamic_post_like_plugin->get_like_link( $type, $post_id );
 }
 
 /**
