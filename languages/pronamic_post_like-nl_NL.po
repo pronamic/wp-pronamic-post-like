@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pronamic Post Like\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-26 10:05+0100\n"
-"PO-Revision-Date: 2013-09-26 10:05+0100\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/pronamic-post-like\n"
+"POT-Creation-Date: 2013-11-27 10:00:36+00:00\n"
+"PO-Revision-Date: 2013-11-27 11:01+0100\n"
 "Last-Translator: Remco Tolsma <info@remcotolsma.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "Language: nl_NL\n"
@@ -19,25 +19,54 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: pronamic-post-like.php:51
-msgid "I liked this post on Facebook."
-msgstr "Ik vond dit bericht leuk op Facebook."
-
-#: pronamic-post-like.php:52
-msgid "I tweeted this post on Twitter."
-msgstr "Ik twitterde dit bericht op Twitter."
-
-#: pronamic-post-like.php:53
-msgid "I voted on this post with my user account."
-msgstr "Ik heb op dit bericht gestemd via mijn gebruikersaccount."
-
-#: pronamic-post-like.php:163
-msgid "Anonymous"
-msgstr "Anoniem"
-
 #: includes/gravityforms.php:54
 msgid "Vote"
 msgstr "Stem"
+
+#: includes/shortcodes.php:10
+msgid "Like"
+msgstr "Vind ik leuk"
+
+#: pronamic-post-like.php:85
+msgid "I voted on this post with my user account."
+msgstr "Ik heb op dit bericht gestemd via mijn gebruikersaccount."
+
+#: pronamic-post-like.php:86
+msgid "I liked this post on Facebook."
+msgstr "Ik vond dit bericht leuk op Facebook."
+
+#: pronamic-post-like.php:87
+msgid "I tweeted this post on Twitter."
+msgstr "Ik twitterde dit bericht op Twitter."
+
+#: pronamic-post-like.php:177
+msgid "Anonymous"
+msgstr "Anoniem"
+
+#. Plugin Name of the plugin/theme
+msgid "Pronamic Post Like"
+msgstr "Pronamic bericht \"Vind ik leuk\""
+
+#. Plugin URI of the plugin/theme
+msgid "http://wp.pronamic.eu/plugins/pronamic-post-like/"
+msgstr "http://wp.pronamic.eu/plugins/pronamic-post-like/"
+
+#. Description of the plugin/theme
+msgid ""
+"Pronamic Post Like is a powerful, extendable post like/vote plugin that "
+"helps you to setup any kind of like/vote system."
+msgstr ""
+"Pronamic bericht \"Vind ik leuk\" is een krachtige uitbreidbare \"Vind ik "
+"leuk\" / stem plugin die je helpt om een \"Vind ik leuk\" / stem systeem op "
+"te zetten."
+
+#. Author of the plugin/theme
+msgid "Pronamic"
+msgstr "Pronamic"
+
+#. Author URI of the plugin/theme
+msgid "http://pronamic.eu/"
+msgstr "http://pronamic.nl/"
 
 #~ msgid "AppThemes"
 #~ msgstr "AppThemes"
@@ -1651,12 +1680,6 @@ msgstr "Stem"
 #~ msgid "Blocks"
 #~ msgstr "Blokken"
 
-#~ msgid "http://pronamic.eu/"
-#~ msgstr "http://pronamic.nl/"
-
-#~ msgid "http://pronamic.eu/contact/"
-#~ msgstr "http://pronamic.nl/contact/"
-
 #~ msgid "Support"
 #~ msgstr "Support"
 
@@ -1671,9 +1694,6 @@ msgstr "Stem"
 
 #~ msgid "News"
 #~ msgstr "Nieuws"
-
-#~ msgid "Pronamic News"
-#~ msgstr "Pronamic nieuws"
 
 #~ msgid "Concept and realisation by %s"
 #~ msgstr "Concept en realisatie door %s"
