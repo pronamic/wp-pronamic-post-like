@@ -194,7 +194,7 @@ class Pronamic_WP_PostLikePlugin {
 			'comment_author'       => $comment_author,
 			'comment_author_email' => $comment_author_email,
 			'comment_author_url'   => $comment_author_url,
-			'user_id'              => $user_id
+			'user_id'              => $user_id,
 		);
 		
 		return $commentdata;
