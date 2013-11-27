@@ -44,6 +44,7 @@ class Pronamic_WP_PostLikePlugin {
 		
 		require_once $this->path . 'includes/functions.php';
 		require_once $this->path . 'includes/gravityforms.php';
+		require_once $this->path . 'includes/shortcodes.php';
 		
 		add_action( 'plugins_loaded', array( $this, 'plugins_loaded' ) );
 		
@@ -259,7 +260,11 @@ class Pronamic_WP_PostLikePlugin {
 	 * Maybe like
 	 */
 	public function maybe_like() {
-		if ( filter_has_var( INPUT_GET, 'like_id' ) && wp_verify_nonce( filter_input( INPUT_GET, 'like_nonce', FILTER_SANITIZE_STRING ), 'pronamic_like' ) ) {
+		$like  = true;
+		$like &= filter_has_var( INPUT_GET, 'like_id' );
+		$like &= wp_verify_nonce( filter_input( INPUT_GET, 'like_nonce', FILTER_SANITIZE_STRING ), 'pronamic_like' );
+		
+		if ( $like ) {
 			$post_id = filter_input( INPUT_GET, 'like_id', FILTER_SANITIZE_STRING );
 			$type    = filter_input( INPUT_GET, 'like_type', FILTER_SANITIZE_STRING );
 
@@ -275,7 +280,7 @@ class Pronamic_WP_PostLikePlugin {
 			if ( $result ) {
 				$url = add_query_arg( 'liked', $result, $url );
 			}
-			
+
 			wp_redirect( $url );
 
 			exit;
@@ -520,7 +525,21 @@ class Pronamic_WP_PostLikePlugin {
 		
 		update_post_meta( $post_id, '_pronamic_post_like_count', $like_count );
 	}
+
+	//////////////////////////////////////////////////
 	
+	/**
+	 * Get exclude comment type where
+	 * 
+	 * @return string
+	 */
+	private function get_exclude_comment_type_where() {
+		$comment_type = $this->get_types();
+		$comment_type = "'" . join( "', '", $comment_type ) . "'";
+
+		return " AND comment_type NOT IN ($comment_type)";
+	}
+
 	/**
 	 * Comments clauses
 	 * 
@@ -528,11 +547,8 @@ class Pronamic_WP_PostLikePlugin {
 	 * @return https://github.com/WordPress/WordPress/blob/3.6.1/wp-includes/comment.php#L367
 	 */
 	public function comments_clauses( $clauses ) {
-		$comment_type = $this->get_types();
-		$comment_type = "'" . join( "', '", $comment_type ) . "'";
+		$clauses['where'] .= $this->get_exclude_comment_type_where();
 
-		$clauses['where'] .= " AND comment_type NOT IN ($comment_type)";
-		
 		return $clauses;
 	}
 }
