@@ -25,6 +25,11 @@ data attribute:
 	data-pronamic-social-vote-count=".pronamic-social-vote-count" 
 
 
+== Developers ==
+
+*	php ~/wp/svn/i18n-tools/makepot.php wp-plugin ~/wp/git/pronamic-post-like ~/wp/git/pronamic-post-like/languages/pronamic_post_like.pot
+
+
 == Screenshots ==
 
 ...
