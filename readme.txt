@@ -5,7 +5,8 @@ Requires at least: 3.0
 Tested up to: 3.2
 Stable tag: 1.0.0
 
-
+Pronamic Post Like is a powerful, extendable post like/vote plugin that helps 
+you to setup any kind of like/vote system. 
 
 == Description ==
 
