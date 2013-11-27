@@ -397,7 +397,7 @@ class Pronamic_WP_PostLikePlugin {
 			'like_id'   => $post_id,
 			'like_type' => $type,
 			'liked'     => false
-		) );
+		), get_permalink( $post_id ) );
 
 		// $link = wp_nonce_url( $link, 'pronamic_like', 'like_nonce' );
 		
