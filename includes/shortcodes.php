@@ -1,6 +1,6 @@
 <?php
 
-function pronamic_post_like_shortcode( $atts, $content = '' ) {
+function pronamic_post_like_link_shortcode( $atts, $content = '' ) {
 	extract( shortcode_atts( array(
 		'post_id' => null,
 		'type'    => 'user_vote'
@@ -20,4 +20,4 @@ function pronamic_post_like_shortcode( $atts, $content = '' ) {
 	return $output;
 }
 
-add_shortcode( 'pronamic_post_like', 'pronamic_post_like_shortcode' );
+add_shortcode( 'pronamic_post_like_link', 'pronamic_post_like_link_shortcode' );
