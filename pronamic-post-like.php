@@ -262,7 +262,7 @@ class Pronamic_WP_PostLikePlugin {
 	public function maybe_like() {
 		$like  = true;
 		$like &= filter_has_var( INPUT_GET, 'like_id' );
-		$like &= wp_verify_nonce( filter_input( INPUT_GET, 'like_nonce', FILTER_SANITIZE_STRING ), 'pronamic_like' );
+		// $like &= wp_verify_nonce( filter_input( INPUT_GET, 'like_nonce', FILTER_SANITIZE_STRING ), 'pronamic_like' );
 		
 		if ( $like ) {
 			$post_id = filter_input( INPUT_GET, 'like_id', FILTER_SANITIZE_STRING );
@@ -399,7 +399,7 @@ class Pronamic_WP_PostLikePlugin {
 			'liked'     => false
 		) );
 
-		$link = wp_nonce_url( $link, 'pronamic_like', 'like_nonce' );
+		// $link = wp_nonce_url( $link, 'pronamic_like', 'like_nonce' );
 		
 		return $link;
 	}
