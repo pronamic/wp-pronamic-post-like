@@ -21,27 +21,35 @@
 
 	/**
 	 * Facebook
+	 * 
+	 * @see https://github.com/Automattic/facebook-wordpress/blob/master/extras/google-analytics.php#L19
 	 * @see https://developers.facebook.com/docs/reference/javascript/FB.Event.subscribe/
 	 */
-	if ( jQuery.type( FB ) == 'object' ) {
-		FB.Event.subscribe( 'edge.create', function( url, widget ) {
-			var $widget = $( widget );
+	function facebookInit() {
+		if ( typeof FB === 'object' ) {
+			FB.Event.subscribe( 'edge.create', function( url, widget ) {
+				var $widget = $( widget );
+				
+				if ( $widget.has( 'pronamic-social-vote' ) ) {
+					socialVote( 'facebook_like', $widget );
+				}
+			} );
 			
-			if ( $widget.has( 'pronamic-social-vote' ) ) {
-				socialVote( 'facebook_like', $widget );
-			}
-		} );
-		
-		FB.Event.subscribe('edge.remove', function( url, widget ) {
-			
-		} );
+			FB.Event.subscribe('edge.remove', function( url, widget ) {
+				
+			} );
+		}
+	}
+	
+	if ( typeof FB_WP === 'object' && FB_WP.queue && FB_WP.queue.add ) { 
+		FB_WP.queue.add( facebookInit );
 	}
 
 	/**
 	 * Twitter
 	 * @see https://dev.twitter.com/docs/tfw-javascript
 	 */
-	if ( jQuery.type( twttr ) == 'object' ) {
+	if ( typeof twttr === 'object' ) {
 		function tweetIntentVote( intentEvent ) {
 			var $target = $( intentEvent.target );
 			
