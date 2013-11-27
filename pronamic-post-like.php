@@ -65,8 +65,8 @@ class Pronamic_WP_PostLikePlugin {
 		// AJAX
 		$action = 'pronamic_social_vote';
 
-		add_action( "wp_ajax_$action", array( $this, 'ajax_social_vote' ) );
-		add_action( "wp_ajax_nopriv_$action", array( $this, 'ajax_social_vote' ) );
+		add_action( 'wp_ajax_' . $action, array( $this, 'ajax_social_vote' ) );
+		add_action( 'wp_ajax_nopriv_' . $action, array( $this, 'ajax_social_vote' ) );
 	}
 
 	/**
