@@ -72,17 +72,20 @@ function pronamic_post_like_gform_entry_info( $form_id, $lead ) {
 	
 	$comment_id = gform_get_meta( $id, 'pronamic_post_like_comment_id' );
 
-	_e( 'Liked: ', 'pronamic_post_like' );
+	$value = __( 'No', 'pronamic_post_like' );
 
 	if ( $comment_id ) {
-		printf(
+		$value = sprintf(
 			'<a href="%s">%s</a>',
 			esc_attr( get_edit_comment_link( $comment_id ) ),
 			__( 'Yes', 'pronamic_post_like' )
 		);
-	} else {
-		_e( 'No', 'pronamic_post_like' );
 	}
+
+	printf( 
+		__( 'Liked: %s', 'pronamic_post_like' ),
+		$value
+	);
 }
 
 add_action( 'gform_entry_info', 'pronamic_post_like_gform_entry_info', 10, 2 );

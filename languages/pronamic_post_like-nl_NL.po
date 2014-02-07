@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pronamic Post Like\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/pronamic-post-like\n"
-"POT-Creation-Date: 2014-02-07 13:37:41+00:00\n"
-"PO-Revision-Date: 2014-02-07 14:38+0100\n"
+"POT-Creation-Date: 2014-02-07 13:41:14+00:00\n"
+"PO-Revision-Date: 2014-02-07 14:41+0100\n"
 "Last-Translator: Remco Tolsma <info@remcotolsma.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "Language: nl_NL\n"
@@ -18,16 +18,16 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #: includes/gravityforms.php:75
-msgid "Liked: "
-msgstr "Vind ik leuk:"
+msgid "No"
+msgstr "Nee"
 
 #: includes/gravityforms.php:81
 msgid "Yes"
 msgstr "Ja"
 
-#: includes/gravityforms.php:84
-msgid "No"
-msgstr "Nee"
+#: includes/gravityforms.php:86
+msgid "Liked: %s"
+msgstr "Vind ik leuk: %s"
 
 #: includes/shortcodes.php:10
 msgid "Like"
