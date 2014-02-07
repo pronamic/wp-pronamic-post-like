@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Pronamic Post Like
-Plugin URI: http://wp.pronamic.eu/plugins/pronamic-post-like/
+Plugin URI: http://www.happywp.com/plugins/pronamic-post-like/
 Description: Pronamic Post Like is a powerful, extendable post like/vote plugin that helps you to setup any kind of like/vote system. 
  
 Version: 1.0.0
@@ -275,10 +275,12 @@ class Pronamic_WP_PostLikePlugin {
 				'liked'      => 'no'
 			) ) . '#like-' . $type;
 
-			$result = $this->vote( $post_id, $type );
+			$comment_id = $this->vote( $post_id, $type );
 
-			if ( $result ) {
-				$url = add_query_arg( 'liked', $result, $url );
+			if ( $comment_id ) {
+				$url = add_query_arg( 'liked', $comment_id, $url );
+				
+				do_action( 'pronamic_post_like_liked', $post_id, $comment_id, $type );
 			}
 
 			wp_redirect( $url );
