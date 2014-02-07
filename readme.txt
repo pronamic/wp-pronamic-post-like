@@ -2,7 +2,7 @@
 Contributors: pronamic, remcotolsma
 Tags: pronamic, post, like
 Requires at least: 3.0
-Tested up to: 3.2
+Tested up to: 3.8.1
 Stable tag: 1.0.0
 
 Pronamic Post Like is a powerful, extendable post like/vote plugin that helps 
@@ -11,6 +11,10 @@ you to setup any kind of like/vote system.
 == Description ==
 
 ...
+
+= Gravity Forms =
+
+[pronamic_gform_post_like_link id="{entry_id}"]Like[/pronamic_gform_post_like_link]
 
 
 == Installation ==
@@ -38,7 +42,9 @@ data attribute:
 == Changelog ==
 
 = 1.0.0 =
-*	Initial release
+*	Removed shortcode vote link wich used a unique key in the user meta ([pronamic_vote_link]).
+*	Added specific shortcode for in Gravity Forms notifications ([pronamic_gform_post_like_link id="{entry_id}"]Like[/pronamic_gform_post_like_link]).
+*	Initial release.
 
 
 == Links ==
