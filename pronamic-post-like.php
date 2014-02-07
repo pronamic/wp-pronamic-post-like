@@ -53,7 +53,6 @@ class Pronamic_WP_PostLikePlugin {
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ), 20 );
 
 		add_action( 'template_redirect', array( $this, 'maybe_like' ) );
-		add_action( 'template_redirect', array( $this, 'maybe_vote' ) );
 
 		add_action( 'wp_update_comment_count', array( $this, 'update_comment_count' ) );
 		
@@ -286,48 +285,6 @@ class Pronamic_WP_PostLikePlugin {
 			wp_redirect( $url );
 
 			exit;
-		}
-	}
-	
-	/**
-	 * Maybe vote
-	 */
-	public function maybe_vote() {
-		$key = filter_input( INPUT_GET, 'ppl_key', FILTER_SANITIZE_STRING);
-		
-		if ( ! empty( $key ) ) {
-			$user = pronamic_post_like_get_user_by_key( $key );
-		
-			if ( $user !== false ) {
-				$user_login    = $user->user_login;
-				$user_password = get_user_meta( $user->ID, 'pronamic_post_like_password', true );
-		
-				$user = wp_signon( array(
-					'user_login'    => $user_login,
-					'user_password' => $user_password,
-					'remember'      => false
-				) );
-		
-				if ( is_wp_error( $user ) ) {
-					echo $user->get_error_message();
-				} else {
-					delete_user_meta( $user->ID, 'pronamic_post_like_key' );
-
-					$result = $this->vote( get_the_ID(), 'user_vote' );
-		
-					$url = add_query_arg( 'ppl_key', false, get_permalink() );
-		
-					if ( $result ) {
-						$url = add_query_arg( 'voted', 'yes', $url );
-					} else {
-						$url = add_query_arg( 'voted', 'no', $url );
-					}
-		
-					wp_redirect( $url, 302 );
-		
-					exit;
-				}
-			}
 		}
 	}
 

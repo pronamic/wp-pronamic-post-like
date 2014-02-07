@@ -24,44 +24,10 @@ add_action( 'gform_user_registered', 'pronamic_post_like_gform_user_registered',
  * @param array $lead
  */
 function pronamic_post_like_gform_entry_created( $lead ) {
-	gform_update_meta( $lead['id'], 'pronamic_post_like_key', wp_generate_password( 16, false ) );
 	gform_update_meta( $lead['id'], 'post_id', get_the_ID() );
 }
 
 add_action( 'gform_entry_created', 'pronamic_post_like_gform_entry_created' );
-
-/**
- * Vote link shortcode
- *
- * @param array $atts
- * @param string $content
- * @return string
-*/
-function pronamic_shortcode_pronamic_vote_link( $atts, $content = '' ) {
-	extract( shortcode_atts( array(
-	'id' => null
-	), $atts ) );
-
-	$output = '';
-
-	if ( method_exists( 'RGFormsModel', 'get_lead' ) ) {
-		$lead = RGFormsModel::get_lead( $id );
-
-		if ( $lead ) {
-			$url = $lead['source_url'];
-			$key = gform_get_meta( $id, 'pronamic_post_like_key' );
-
-			$url = add_query_arg( 'ppl_key', $key, $url );
-			$content = empty( $content ) ? __( 'Vote', 'pronamic_post_like' ) : $content;
-
-			$output .= sprintf( '<a href="%s">%s</a>', esc_attr( $url ), $content );
-		}
-	}
-
-	return $output;
-}
-
-add_shortcode( 'pronamic_vote_link', 'pronamic_shortcode_pronamic_vote_link' );
 
 function pronamic_gform_post_like_link_shortcode( $atts, $content = '' ) {
 	extract( shortcode_atts( array(
