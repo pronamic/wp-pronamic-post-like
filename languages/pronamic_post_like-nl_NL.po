@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pronamic Post Like\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/pronamic-post-like\n"
-"POT-Creation-Date: 2013-11-27 10:00:36+00:00\n"
-"PO-Revision-Date: 2013-11-27 11:01+0100\n"
+"POT-Creation-Date: 2014-02-07 13:37:41+00:00\n"
+"PO-Revision-Date: 2014-02-07 14:38+0100\n"
 "Last-Translator: Remco Tolsma <info@remcotolsma.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "Language: nl_NL\n"
@@ -13,33 +13,39 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_n:1,2;__ngettext:1,2;__withdesc;_ewithdesc;_c;"
 "_n_noop:1,2;__ngettext_noop:1,2;_x:2c,1;_nc:1,2;esc_attr_e;esc_html_e;"
 "esc_attr__;_nx:4c,1,2;_nx_noop:4c,1,2;esc_html_x:2c,1;esc_html__;_ex:2c,1\n"
-"X-Poedit-Basepath: ../\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.6.3\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-SearchPath-0: .\n"
 
-#: includes/gravityforms.php:54
-msgid "Vote"
-msgstr "Stem"
+#: includes/gravityforms.php:75
+msgid "Liked: "
+msgstr "Vind ik leuk:"
+
+#: includes/gravityforms.php:81
+msgid "Yes"
+msgstr "Ja"
+
+#: includes/gravityforms.php:84
+msgid "No"
+msgstr "Nee"
 
 #: includes/shortcodes.php:10
 msgid "Like"
 msgstr "Vind ik leuk"
 
-#: pronamic-post-like.php:85
+#: pronamic-post-like.php:84
 msgid "I voted on this post with my user account."
 msgstr "Ik heb op dit bericht gestemd via mijn gebruikersaccount."
 
-#: pronamic-post-like.php:86
+#: pronamic-post-like.php:85
 msgid "I liked this post on Facebook."
 msgstr "Ik vond dit bericht leuk op Facebook."
 
-#: pronamic-post-like.php:87
+#: pronamic-post-like.php:86
 msgid "I tweeted this post on Twitter."
 msgstr "Ik twitterde dit bericht op Twitter."
 
-#: pronamic-post-like.php:177
+#: pronamic-post-like.php:176
 msgid "Anonymous"
 msgstr "Anoniem"
 
@@ -48,8 +54,8 @@ msgid "Pronamic Post Like"
 msgstr "Pronamic bericht \"Vind ik leuk\""
 
 #. Plugin URI of the plugin/theme
-msgid "http://wp.pronamic.eu/plugins/pronamic-post-like/"
-msgstr "http://wp.pronamic.eu/plugins/pronamic-post-like/"
+msgid "http://www.happywp.com/plugins/pronamic-post-like/"
+msgstr "http://www.happywp.com/plugins/pronamic-post-like/"
 
 #. Description of the plugin/theme
 msgid ""
@@ -67,6 +73,9 @@ msgstr "Pronamic"
 #. Author URI of the plugin/theme
 msgid "http://pronamic.eu/"
 msgstr "http://pronamic.nl/"
+
+#~ msgid "Vote"
+#~ msgstr "Stem"
 
 #~ msgid "AppThemes"
 #~ msgstr "AppThemes"
@@ -88,12 +97,6 @@ msgstr "http://pronamic.nl/"
 
 #~ msgid "Enable iDEAL"
 #~ msgstr "iDEAL inschakelen"
-
-#~ msgid "Yes"
-#~ msgstr "Ja"
-
-#~ msgid "No"
-#~ msgstr "Nee"
 
 #~ msgid "iDEAL Configuration"
 #~ msgstr "iDEAL-configuratie"
@@ -1311,12 +1314,12 @@ msgstr "http://pronamic.nl/"
 #~ "32 tekens zal automatisch worden afgekapt."
 
 #~ msgid ""
-#~ "Merge Tag Examples: Entry Id = <code>{entry_id}</code>, Form Id = <code>"
-#~ "{form_id}</code>, Form Title = <code>{form_title}</code>"
+#~ "Merge Tag Examples: Entry Id = <code>{entry_id}</code>, Form Id = "
+#~ "<code>{form_id}</code>, Form Title = <code>{form_title}</code>"
 #~ msgstr ""
 #~ "Samenvoegen tag voorbeelden: Inzending ID = <code>{entry_id}</code>, "
-#~ "Formulier ID = <code>{form_id}</code>, Formulier titel = <code>"
-#~ "{form_title}</code>"
+#~ "Formulier ID = <code>{form_id}</code>, Formulier titel = "
+#~ "<code>{form_title}</code>"
 
 #~ msgid "Options"
 #~ msgstr "Opties"
