@@ -3,7 +3,7 @@ Contributors: pronamic, remcotolsma
 Tags: pronamic, post, like
 Requires at least: 3.0
 Tested up to: 3.8.1
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 
 Pronamic Post Like is a powerful, extendable post like/vote plugin that helps 
 you to setup any kind of like/vote system. 
@@ -40,6 +40,9 @@ data attribute:
 
 
 == Changelog ==
+
+= 1.0.2 =
+*	Added Gravity Forms entry meta column for the liked comment ID.
 
 = 1.0.1 =
 *	Update to version 1.0.1.
