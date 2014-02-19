@@ -72,8 +72,22 @@ function pronamic_post_like_gform_entry_info( $form_id, $lead ) {
 	
 	$comment_id = gform_get_meta( $id, 'pronamic_post_like_comment_id' );
 
-	$value = __( 'No', 'pronamic_post_like' );
+	printf( 
+		__( 'Liked: %s', 'pronamic_post_like' ),
+		pronamic_post_like_gform_entry_value( $comment_id )
+	);
+}
 
+add_action( 'gform_entry_info', 'pronamic_post_like_gform_entry_info', 10, 2 );
+
+/**
+ * Gravity Forms post like entry value
+ * 
+ * @param string $comment_id
+ */
+function pronamic_post_like_gform_entry_value( $comment_id ) {
+	$value = __( 'No', 'pronamic_post_like' );
+	
 	if ( $comment_id ) {
 		$value = sprintf(
 			'<a href="%s">%s</a>',
@@ -81,14 +95,9 @@ function pronamic_post_like_gform_entry_info( $form_id, $lead ) {
 			__( 'Yes', 'pronamic_post_like' )
 		);
 	}
-
-	printf( 
-		__( 'Liked: %s', 'pronamic_post_like' ),
-		$value
-	);
+	
+	return $value;
 }
-
-add_action( 'gform_entry_info', 'pronamic_post_like_gform_entry_info', 10, 2 );
 
 /**
  * Liked
@@ -105,3 +114,41 @@ function pronamic_post_like_gform_liked( $post_id, $comment_id, $type ) {
 }
 
 add_action( 'pronamic_post_like_liked', 'pronamic_post_like_gform_liked', 10, 3 );
+
+/**
+ * Entry meta
+ * 
+ * @param array $entry_meta
+ * @param string $form_id
+ * @return multitype:string boolean
+ */
+function pronamic_post_like_gform_entry_meta( $entry_meta, $form_id ){
+	$entry_meta['pronamic_post_like_comment_id'] = array(
+		'label'             => __( 'Liked', 'pronamic_post_like' ),
+		'is_numeric'        => false,
+		'is_default_column' => false,
+	);
+
+	return $entry_meta;
+}
+
+add_filter( 'gform_entry_meta', 'pronamic_post_like_gform_entry_meta', 10, 2 );
+
+/**
+ * Entries field value
+ * 
+ * @param string $value
+ * @param string $form_id
+ * @param string $field_id
+ * @param array $lead
+ * @return string
+ */
+function pronamic_post_like_gform_entries_field_value( $value, $form_id, $field_id, $lead ) {
+	if ( 'pronamic_post_like_comment_id' == $field_id ) {
+		$value = pronamic_post_like_gform_entry_value( $value );
+	}
+
+	return $value;	
+}
+
+add_filter( 'gform_entries_field_value', 'pronamic_post_like_gform_entries_field_value', 10, 4 );
