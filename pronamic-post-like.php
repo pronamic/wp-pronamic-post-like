@@ -97,7 +97,7 @@ class Pronamic_WP_PostLikePlugin {
 		 */
 		wp_enqueue_script(
 			'twitter-widgets',
-			'http://platform.twitter.com/widgets.js',
+			'//platform.twitter.com/widgets.js',
 			array( ),
 			false,
 			true
