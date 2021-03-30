@@ -155,6 +155,10 @@ class Pronamic_WP_PostLikePlugin {
 			$ip_address = filter_input( INPUT_SERVER, 'REMOTE_ADDR', FILTER_VALIDATE_IP );
 		}
 
+		if ( empty( $ip_address ) ) {
+			$ip_address = $_SERVER['REMOTE_ADDR'];
+		}
+
 		if ( strpos( $ip_address, ',' ) !== false ) {
 			$ip_addresses = explode( ',', $ip_address );
 			
